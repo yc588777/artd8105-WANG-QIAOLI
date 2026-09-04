@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <title>螢光潮汐：藍眼淚</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <main class="stage" id="stage">
+      <div class="canvas-frame" tabindex="0">
+        <div class="canvas-stage">
+          <div id="canvas-holder"></div>
+          <div id="pattern-hint" class="pattern-hint" hidden>
+            <span id="pattern-hint-text">請上傳一張紋樣圖片以生成發光粒子。</span>
+          </div>
+          <div id="zoom-badge" class="fps-badge">×1.0</div>
+          <div id="fps-badge" class="fps-badge fps-badge-shift" hidden>FPS --</div>
+          <div id="toast" class="toast" hidden></div>
+          <div id="canvas-flash" class="canvas-flash" hidden></div>
+          <button type="button" id="capture-hud" class="capture-hud">空格截圖 0/4</button>
+          <button type="button" class="fs-btn" id="btn-fullscreen" aria-label="全螢幕顯示">全螢幕</button>
+        </div>
+      </div>
+    </main>
+
+    <aside class="panel" id="panel">
+      <header class="panel-head">
+        <div>
+          <h1 data-i18n="title">螢光潮汐：藍眼淚</h1>
+          <p class="sub" data-i18n="subtitle">Fluorescent Tide: Bioluminescent Sea Sparkle</p>
+        </div>
+        <button type="button" class="icon-btn" id="btn-collapse" data-i18n="collapse" data-i18n-aria="collapseAria" aria-label="摺疊面板">收起</button>
+      </header>
+
+      <div class="seg lang-seg" role="group" data-i18n-aria="langAria" aria-label="介面語言">
+        <button type="button" class="seg-btn is-on" id="lang-zh" data-lang="zh">繁體</button>
+        <button type="button" class="seg-btn" id="lang-en" data-lang="en">English</button>
+      </div>
+
+      <section class="block mode-block">
+        <h2 data-i18n="modeTitle">互動模式</h2>
+        <div class="seg mode-seg" role="tablist">
+          <button type="button" class="seg-btn is-on" id="mode-free" data-mode="free" data-i18n="modeFree">自由藻海</button>
+          <button type="button" class="seg-btn" id="mode-pattern" data-mode="pattern" data-i18n="modePattern">紋樣喚醒</button>
+          <button type="button" class="seg-btn" id="mode-body" data-mode="body" data-i18n="modeBody">身影喚醒</button>
+        </div>
+      </section>
+
+      <details open>
+        <summary data-i18n="bg.title">背景圖片</summary>
+        <p class="note" data-i18n="bg.note">只改變畫布背景，不影響粒子分佈。</p>
+        <p class="note" id="bg-pattern-note" data-i18n="bg.patternNote" hidden>紋樣喚醒模式下，這裡只改夜海背景。鳥群或紋樣請到下方「紋樣圖片」裡上傳。</p>
+        <label class="file-btn">
+          <span data-i18n="bg.upload">上傳背景圖片</span>
+          <input id="bg-file" type="file" accept="image/*" />
+        </label>
+        <button type="button" class="ghost" id="bg-remove" data-i18n="bg.remove">移除背景圖片</button>
+        <label class="ctrl">
+          <span><span data-i18n="bg.fit">適配方式</span></span>
+          <select data-bind="sharedSettings.bgFit" data-layout="bg">
+            <option value="cover" data-i18n="bg.fitCover">覆蓋畫布 Cover</option>
+            <option value="contain" data-i18n="bg.fitContain">完整顯示 Contain</option>
+            <option value="stretch" data-i18n="bg.fitStretch">拉伸 Stretch</option>
+          </select>
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="bg.brightness">背景明度</span> <b data-val="sharedSettings.bgBrightness"></b></span>
+          <input type="range" min="0" max="1.5" step="0.01" value="0.55" data-bind="sharedSettings.bgBrightness" data-layout="bg" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="bg.alpha">背景透明度</span> <b data-val="sharedSettings.bgAlpha"></b></span>
+          <input type="range" min="0" max="1" step="0.01" value="0.7" data-bind="sharedSettings.bgAlpha" data-layout="bg" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="bg.blur">背景模糊度</span> <b data-val="sharedSettings.bgBlur"></b></span>
+          <input type="range" min="0" max="12" step="0.5" value="1.5" data-bind="sharedSettings.bgBlur" data-layout="bg" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="bg.mask">深藍蒙版</span> <b data-val="sharedSettings.bgMask"></b></span>
+          <input type="range" min="0" max="1" step="0.01" value="0.72" data-bind="sharedSettings.bgMask" data-layout="bg" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="bg.scale">背景縮放</span> <b data-val="sharedSettings.bgScale"></b></span>
+          <input type="range" min="0.6" max="2.4" step="0.01" value="1" data-bind="sharedSettings.bgScale" data-layout="bg" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="bg.x">水平位置</span> <b data-val="sharedSettings.bgX"></b></span>
+          <input type="range" min="0" max="1" step="0.01" value="0.5" data-bind="sharedSettings.bgX" data-layout="bg" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="bg.y">垂直位置</span> <b data-val="sharedSettings.bgY"></b></span>
+          <input type="range" min="0" max="1" step="0.01" value="0.5" data-bind="sharedSettings.bgY" data-layout="bg" />
+        </label>
+      </details>
+
+      <div id="panel-free">
+        <details open>
+          <summary data-i18n="preset.title">視覺預設</summary>
+          <div class="preset-row">
+            <button type="button" class="ghost" data-preset="still" data-i18n="preset.still">靜謐深海</button>
+            <button type="button" class="ghost" data-preset="tide" data-i18n="preset.tide">藍色潮汐</button>
+            <button type="button" class="ghost" data-preset="storm" data-i18n="preset.storm">風暴螢光</button>
+            <button type="button" class="ghost" data-preset="dream" data-i18n="preset.dream">夢境藻海</button>
+          </div>
+        </details>
+
+        <details open>
+          <summary data-i18n="free.params">粒子參數</summary>
+          <label class="ctrl">
+            <span><span data-i18n="free.count">粒子數量</span> <b data-val="freeSettings.count"></b></span>
+            <input type="range" min="300" max="3000" step="50" value="1800" data-bind="freeSettings.count" data-rebuild="free" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="free.size">粒子尺寸</span> <b data-val="freeSettings.size"></b></span>
+            <input type="range" min="0.6" max="5" step="0.05" value="2.1" data-bind="freeSettings.size" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="free.sizeRandom">尺寸隨機度</span> <b data-val="freeSettings.sizeRandom"></b></span>
+            <input type="range" min="0" max="1" step="0.01" value="0.55" data-bind="freeSettings.sizeRandom" data-rebuild="free" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="free.cluster">藻群聚集度</span> <b data-val="freeSettings.cluster"></b></span>
+            <input type="range" min="0" max="1" step="0.01" value="0.42" data-bind="freeSettings.cluster" data-rebuild="free" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="free.flicker">自然閃爍機率</span> <b data-val="freeSettings.flicker"></b></span>
+            <input type="range" min="0" max="0.08" step="0.001" value="0.01" data-bind="freeSettings.flicker" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="free.depthMix">深度層次</span> <b data-val="freeSettings.depthMix"></b></span>
+            <input type="range" min="0" max="1" step="0.01" value="0.62" data-bind="freeSettings.depthMix" data-rebuild="free" />
+          </label>
+        </details>
+
+        <details open>
+          <summary data-i18n="interact.title">交互參數</summary>
+          <p class="note" data-i18n="interact.focusNote">發光仍是沿路徑被點亮的浮游生物，不是畫上去的光線。把影響半徑拧小，藻群會更沿著手勢聚成一條軌跡。</p>
+          <label class="ctrl">
+            <span><span data-i18n="interact.mouseRadius">滑鼠影響半徑</span> <b data-val="freeSettings.mouseRadius"></b></span>
+            <input type="range" min="12" max="220" step="1" value="56" data-bind="freeSettings.mouseRadius" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="interact.disturbance">擾動力度</span> <b data-val="freeSettings.disturbance"></b></span>
+            <input type="range" min="0" max="1.4" step="0.01" value="0.38" data-bind="freeSettings.disturbance" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="interact.vortex">旋渦強度</span> <b data-val="freeSettings.vortex"></b></span>
+            <input type="range" min="0" max="1.2" step="0.01" value="0.24" data-bind="freeSettings.vortex" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="interact.speedSense">滑鼠速度敏感度</span> <b data-val="freeSettings.speedSense"></b></span>
+            <input type="range" min="0" max="2" step="0.01" value="0.72" data-bind="freeSettings.speedSense" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="interact.trailDensity">軌跡採樣密度</span> <b data-val="freeSettings.trailDensity"></b></span>
+            <input type="range" min="0.1" max="1" step="0.01" value="0.74" data-bind="freeSettings.trailDensity" />
+          </label>
+        </details>
+
+        <details open>
+          <summary data-i18n="glow.title">發光參數</summary>
+          <label class="ctrl">
+            <span><span data-i18n="glow.intensity">發光強度</span> <b data-val="freeSettings.glow"></b></span>
+            <input type="range" min="0.2" max="1.6" step="0.01" value="0.86" data-bind="freeSettings.glow" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="glow.halo">光暈範圍</span> <b data-val="freeSettings.halo"></b></span>
+            <input type="range" min="0.8" max="4.5" step="0.05" value="2.35" data-bind="freeSettings.halo" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="glow.coreSize">亮核尺寸</span> <b data-val="freeSettings.coreSize"></b></span>
+            <input type="range" min="0.15" max="1.2" step="0.01" value="0.46" data-bind="freeSettings.coreSize" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="glow.decay">發光衰減速度</span> <b data-val="freeSettings.decay"></b></span>
+            <input type="range" min="0" max="0.06" step="0.0005" value="0.018" data-bind="freeSettings.decay" />
+          </label>
+          <p class="note" data-i18n="glow.decayNote">調到 0 時發光不再消散，可畫完軌跡再匯出 PNG。</p>
+          <label class="ctrl">
+            <span><span data-i18n="glow.duration">螢光持續時間</span> <b data-val="freeSettings.duration"></b></span>
+            <input type="range" min="0.2" max="1.4" step="0.01" value="0.66" data-bind="freeSettings.duration" />
+          </label>
+          <label class="ctrl color">
+            <span data-i18n="glow.color1">顏色一</span>
+            <input type="color" value="#043B73" data-bind="freeSettings.color1" />
+          </label>
+          <label class="ctrl color">
+            <span data-i18n="glow.color2">顏色二</span>
+            <input type="color" value="#00A8FF" data-bind="freeSettings.color2" />
+          </label>
+          <label class="ctrl color">
+            <span data-i18n="glow.coreColor">亮核顏色</span>
+            <input type="color" value="#D8F7FF" data-bind="freeSettings.coreColor" />
+          </label>
+        </details>
+      </div>
+
+      <div id="panel-pattern" hidden>
+        <details open>
+          <summary data-i18n="pattern.imageTitle">紋樣圖片</summary>
+          <p class="note" data-i18n="pattern.imageNote">只決定紋樣粒子的位置與發光形態，不會改動背景或自由藻海。</p>
+          <p class="note" id="pattern-status">尚未上傳紋樣。</p>
+          <label class="file-btn pattern-upload">
+            <span data-i18n="pattern.upload">上傳紋樣圖片</span>
+            <input id="pattern-file" type="file" accept="image/png,image/jpeg,image/webp" />
+          </label>
+          <button type="button" class="ghost" id="pattern-remove" data-i18n="pattern.remove">移除紋樣圖片</button>
+          <label class="check">
+            <input type="checkbox" data-bind="patternSettings.showPreview" />
+            <span data-i18n="pattern.showPreview">顯示紋樣預覽</span>
+          </label>
+          <div class="btn-row">
+            <button type="button" class="ghost" id="pattern-preview-all" data-i18n="pattern.previewAll">預覽全部發光</button>
+            <button type="button" class="ghost" id="pattern-clear-memory" data-i18n="pattern.clearMemory">清除顯影</button>
+          </div>
+        </details>
+
+        <details open>
+          <summary data-i18n="pattern.revealTitle">紋樣顯現方式</summary>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.revealMode">顯現方式</span></span>
+            <select data-bind="patternSettings.revealMode">
+              <option value="local" selected data-i18n="pattern.revealLocal">局部喚醒</option>
+              <option value="memory" data-i18n="pattern.revealMemory">記憶顯影</option>
+            </select>
+          </label>
+        </details>
+
+        <details open>
+          <summary data-i18n="pattern.recogTitle">圖像識別</summary>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.recog">識別方式</span></span>
+            <select data-bind="patternSettings.recognition" data-rebuild="pattern">
+              <option value="contourFill" selected data-i18n="pattern.recogContour">輪廓與填充</option>
+              <option value="auto" data-i18n="pattern.recogAuto">自動識別</option>
+              <option value="bright" data-i18n="pattern.recogBright">提取亮部</option>
+              <option value="dark" data-i18n="pattern.recogDark">提取暗部</option>
+              <option value="alpha" data-i18n="pattern.recogAlpha">提取透明主體</option>
+              <option value="edge" data-i18n="pattern.recogEdge">邊緣提取</option>
+            </select>
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.threshold">明暗閾值</span> <b data-val="patternSettings.threshold"></b></span>
+            <input type="range" min="0.05" max="0.95" step="0.01" value="0.46" data-bind="patternSettings.threshold" data-rebuild="pattern" />
+          </label>
+          <label class="check">
+            <input type="checkbox" data-bind="patternSettings.invert" data-rebuild="pattern" />
+            <span data-i18n="pattern.invert">反相識別</span>
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.edgeSense">邊緣靈敏度</span> <b data-val="patternSettings.edgeSense"></b></span>
+            <input type="range" min="0.05" max="0.9" step="0.01" value="0.32" data-bind="patternSettings.edgeSense" data-rebuild="pattern" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.alphaCut">透明度閾值</span> <b data-val="patternSettings.alphaCut"></b></span>
+            <input type="range" min="0.02" max="0.8" step="0.01" value="0.12" data-bind="patternSettings.alphaCut" data-rebuild="pattern" />
+          </label>
+        </details>
+
+        <details>
+          <summary data-i18n="pattern.genTitle">粒子生成</summary>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.sampleGap">採樣間距</span> <b data-val="patternSettings.sampleGap"></b></span>
+            <input type="range" min="3" max="16" step="1" value="6" data-bind="patternSettings.sampleGap" data-rebuild="pattern" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.density">粒子密度</span> <b data-val="patternSettings.density"></b></span>
+            <input type="range" min="0.15" max="1" step="0.01" value="0.72" data-bind="patternSettings.density" data-rebuild="pattern" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.contourDensity">輪廓密度</span> <b data-val="patternSettings.contourDensity"></b></span>
+            <input type="range" min="0.1" max="1" step="0.01" value="0.86" data-bind="patternSettings.contourDensity" data-rebuild="pattern" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.fillDensity">內部填充密度</span> <b data-val="patternSettings.fillDensity"></b></span>
+            <input type="range" min="0.02" max="0.8" step="0.01" value="0.34" data-bind="patternSettings.fillDensity" data-rebuild="pattern" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.size">粒子尺寸</span> <b data-val="patternSettings.size"></b></span>
+            <input type="range" min="0.5" max="5" step="0.05" value="2" data-bind="patternSettings.size" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.sizeRandom">粒子尺寸隨機度</span> <b data-val="patternSettings.sizeRandom"></b></span>
+            <input type="range" min="0" max="1" step="0.01" value="0.5" data-bind="patternSettings.sizeRandom" data-rebuild="pattern" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.maxCount">最大粒子數量</span> <b data-val="patternSettings.maxCount"></b></span>
+            <input type="range" min="200" max="4000" step="50" value="2400" data-bind="patternSettings.maxCount" data-rebuild="pattern" />
+          </label>
+        </details>
+
+        <details>
+          <summary data-i18n="pattern.layoutTitle">紋樣佈局</summary>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.scale">紋樣縮放</span> <b data-val="patternSettings.scale"></b></span>
+            <input type="range" min="0.25" max="1.4" step="0.01" value="0.78" data-bind="patternSettings.scale" data-layout="pattern" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.posX">水平位置</span> <b data-val="patternSettings.posX"></b></span>
+            <input type="range" min="0.15" max="0.85" step="0.01" value="0.5" data-bind="patternSettings.posX" data-layout="pattern" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.posY">垂直位置</span> <b data-val="patternSettings.posY"></b></span>
+            <input type="range" min="0.15" max="0.85" step="0.01" value="0.48" data-bind="patternSettings.posY" data-layout="pattern" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.rotation">旋轉角度</span> <b data-val="patternSettings.rotation"></b></span>
+            <input type="range" min="-180" max="180" step="1" value="0" data-bind="patternSettings.rotation" data-layout="pattern" />
+          </label>
+          <label class="check">
+            <input type="checkbox" checked data-bind="patternSettings.keepAspect" data-layout="pattern" />
+            <span data-i18n="pattern.keepAspect">保持圖片比例</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" data-bind="patternSettings.flipH" data-layout="pattern" />
+            <span data-i18n="pattern.flipH">水平翻轉</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" data-bind="patternSettings.flipV" data-layout="pattern" />
+            <span data-i18n="pattern.flipV">垂直翻轉</span>
+          </label>
+        </details>
+
+        <details open>
+          <summary data-i18n="pattern.motionTitle">動態參數</summary>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.drift">漂移程度</span> <b data-val="patternSettings.drift"></b></span>
+            <input type="range" min="0" max="1.2" step="0.01" value="0.34" data-bind="patternSettings.drift" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.spring">返回原位力度</span> <b data-val="patternSettings.spring"></b></span>
+            <input type="range" min="0.01" max="0.22" step="0.005" value="0.075" data-bind="patternSettings.spring" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.nudge">擾動幅度</span> <b data-val="patternSettings.nudge"></b></span>
+            <input type="range" min="0" max="1.4" step="0.01" value="0.42" data-bind="patternSettings.nudge" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.spread">發光擴散範圍</span> <b data-val="patternSettings.spread"></b></span>
+            <input type="range" min="24" max="180" step="1" value="110" data-bind="patternSettings.spread" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.wakeDelay">喚醒延遲</span> <b data-val="patternSettings.wakeDelay"></b></span>
+            <input type="range" min="0" max="0.5" step="0.01" value="0.08" data-bind="patternSettings.wakeDelay" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.duration">發光持續時間</span> <b data-val="patternSettings.duration"></b></span>
+            <input type="range" min="0.2" max="1.5" step="0.01" value="0.7" data-bind="patternSettings.duration" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.memoryDecay">記憶衰減速度</span> <b data-val="patternSettings.memoryDecay"></b></span>
+            <input type="range" min="0" max="1" step="0.01" value="0.2" data-bind="patternSettings.memoryDecay" />
+          </label>
+          <p class="note" data-i18n="pattern.memoryDecayNote">調到 0 時光跡完全保持、不再消散。數值越大消得越快。</p>
+        </details>
+
+        <details open>
+          <summary data-i18n="pattern.colorTitle">色彩參數</summary>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.colorMode">色彩模式</span></span>
+            <select data-bind="patternSettings.colorMode">
+              <option value="unified" selected data-i18n="pattern.colorUnified">統一藍色螢光</option>
+              <option value="source" data-i18n="pattern.colorSource">原圖色彩螢光</option>
+            </select>
+          </label>
+          <label class="ctrl color">
+            <span data-i18n="pattern.color1">主發光顏色</span>
+            <input type="color" value="#00A8FF" data-bind="patternSettings.color1" />
+          </label>
+          <label class="ctrl color">
+            <span data-i18n="pattern.color2">輔助發光顏色</span>
+            <input type="color" value="#27D8FF" data-bind="patternSettings.color2" />
+          </label>
+          <label class="ctrl color">
+            <span data-i18n="pattern.coreColor">亮核顏色</span>
+            <input type="color" value="#D8F7FF" data-bind="patternSettings.coreColor" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="pattern.glow">發光強度</span> <b data-val="patternSettings.glow"></b></span>
+            <input type="range" min="0.2" max="1.6" step="0.01" value="0.9" data-bind="patternSettings.glow" />
+          </label>
+        </details>
+      </div>
+
+      <div id="panel-body" hidden>
+        <details open>
+          <summary data-i18n="body.camTitle">攝像頭</summary>
+          <p class="note" data-i18n="body.camNote">開啟後，只捕捉人物剪影作為聚合目標。手勢可在整張畫布上劃出螢光；畫亮的藻群會隨時間聚到人身上。預覽上的淺色塊是已捕捉的身影。作品畫面不放鏡頭。</p>
+          <button type="button" class="ghost" id="btn-handcam">開啟攝像頭</button>
+          <p class="note" id="hand-cam-status">攝像頭未開啟。</p>
+          <div class="hand-preview-wrap" id="hand-preview-wrap" hidden>
+            <video id="hand-cam-preview" playsinline muted autoplay></video>
+            <canvas id="hand-mask-overlay"></canvas>
+          </div>
+        </details>
+
+        <details open>
+          <summary data-i18n="body.gatherTitle">剪影聚合</summary>
+          <p class="note" data-i18n="body.gatherNote">手勢劃過會帶起藻群。它們會慢慢漂到身體各部位，沿人物輪廓排開，內部較疏、深淺不一，並保持浮游。聚合速度拉低會更慢。粒子越大，剪影上點得越疏。</p>
+          <label class="ctrl">
+            <span><span data-i18n="body.gather">聚合速度</span> <b data-val="bodySettings.gather"></b></span>
+            <input type="range" min="0.05" max="1" step="0.01" value="0.52" data-bind="bodySettings.gather" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="body.stillSense">靜止靈敏度</span> <b data-val="bodySettings.stillSense"></b></span>
+            <input type="range" min="0.05" max="1" step="0.01" value="0.42" data-bind="bodySettings.stillSense" />
+          </label>
+          <p class="note" data-i18n="body.stillNote">畫的時候會暫時放慢聚合。數值越高，邊畫邊聚得越多；越低則更等你畫完再往人身上靠。</p>
+          <label class="ctrl">
+            <span><span data-i18n="body.contourBias">輪廓優先</span> <b data-val="bodySettings.contourBias"></b></span>
+            <input type="range" min="0" max="1" step="0.01" value="0.62" data-bind="bodySettings.contourBias" />
+          </label>
+          <p class="note" data-i18n="body.contourNote">越高越貼人物外輪廓；越低內部稍多一些。同一位置只停一顆，避免擠成一團。</p>
+          <label class="ctrl">
+            <span><span data-i18n="body.settle">剪影點亮速度</span> <b data-val="bodySettings.settle"></b></span>
+            <input type="range" min="0.05" max="1.2" step="0.01" value="0.58" data-bind="bodySettings.settle" />
+          </label>
+        </details>
+
+        <details open>
+          <summary data-i18n="body.params">粒子參數</summary>
+          <label class="ctrl">
+            <span><span data-i18n="free.count">粒子數量</span> <b data-val="bodySettings.count"></b></span>
+            <input type="range" min="300" max="3000" step="50" value="1600" data-bind="bodySettings.count" data-rebuild="body" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="free.size">粒子尺寸</span> <b data-val="bodySettings.size"></b></span>
+            <input type="range" min="0.6" max="5" step="0.05" value="2.05" data-bind="bodySettings.size" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="free.sizeRandom">尺寸隨機度</span> <b data-val="bodySettings.sizeRandom"></b></span>
+            <input type="range" min="0" max="1" step="0.01" value="0.52" data-bind="bodySettings.sizeRandom" data-rebuild="body" />
+          </label>
+        </details>
+
+        <details open>
+          <summary data-i18n="interact.title">交互參數</summary>
+          <p class="note" data-i18n="body.gestureNote">手勢或滑鼠都沿路徑點亮浮游生物。軌跡採樣密度越高，劃過帶起的藻群越多。</p>
+          <label class="ctrl">
+            <span><span data-i18n="interact.mouseRadius">影響半徑</span> <b data-val="bodySettings.mouseRadius"></b></span>
+            <input type="range" min="12" max="220" step="1" value="64" data-bind="bodySettings.mouseRadius" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="interact.disturbance">擾動力度</span> <b data-val="bodySettings.disturbance"></b></span>
+            <input type="range" min="0" max="1.4" step="0.01" value="0.32" data-bind="bodySettings.disturbance" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="interact.vortex">旋渦強度</span> <b data-val="bodySettings.vortex"></b></span>
+            <input type="range" min="0" max="1.2" step="0.01" value="0.18" data-bind="bodySettings.vortex" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="interact.speedSense">速度敏感度</span> <b data-val="bodySettings.speedSense"></b></span>
+            <input type="range" min="0" max="2" step="0.01" value="0.7" data-bind="bodySettings.speedSense" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="interact.trailDensity">軌跡採樣密度</span> <b data-val="bodySettings.trailDensity"></b></span>
+            <input type="range" min="0.1" max="1" step="0.01" value="0.7" data-bind="bodySettings.trailDensity" />
+          </label>
+        </details>
+
+        <details open>
+          <summary data-i18n="glow.title">發光參數</summary>
+          <label class="ctrl">
+            <span><span data-i18n="glow.intensity">發光強度</span> <b data-val="bodySettings.glow"></b></span>
+            <input type="range" min="0.2" max="1.6" step="0.01" value="0.92" data-bind="bodySettings.glow" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="glow.halo">光暈範圍</span> <b data-val="bodySettings.halo"></b></span>
+            <input type="range" min="0.8" max="4.5" step="0.05" value="2.45" data-bind="bodySettings.halo" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="glow.coreSize">亮核尺寸</span> <b data-val="bodySettings.coreSize"></b></span>
+            <input type="range" min="0.15" max="1.2" step="0.01" value="0.48" data-bind="bodySettings.coreSize" />
+          </label>
+          <label class="ctrl">
+            <span><span data-i18n="glow.decay">發光衰減速度</span> <b data-val="bodySettings.decay"></b></span>
+            <input type="range" min="0" max="0.06" step="0.0005" value="0.012" data-bind="bodySettings.decay" />
+          </label>
+          <p class="note" data-i18n="body.decayNote">調到 0 時剪影與手勢光跡都不再消散。數值越大滅得越快。</p>
+          <label class="ctrl">
+            <span><span data-i18n="glow.duration">螢光持續時間</span> <b data-val="bodySettings.duration"></b></span>
+            <input type="range" min="0.2" max="1.4" step="0.01" value="0.78" data-bind="bodySettings.duration" />
+          </label>
+          <label class="ctrl color">
+            <span data-i18n="glow.color1">顏色一</span>
+            <input type="color" value="#043B73" data-bind="bodySettings.color1" />
+          </label>
+          <label class="ctrl color">
+            <span data-i18n="glow.color2">顏色二</span>
+            <input type="color" value="#00A8FF" data-bind="bodySettings.color2" />
+          </label>
+          <label class="ctrl color">
+            <span data-i18n="glow.coreColor">亮核顏色</span>
+            <input type="color" value="#D8F7FF" data-bind="bodySettings.coreColor" />
+          </label>
+        </details>
+      </div>
+
+      <details open>
+        <summary data-i18n="micro.title">顯微鏡觀察</summary>
+        <p class="note" data-i18n="micro.note">粒子尺寸只改變圓形光點。梭梨甲藻的顯微鏡形態僅在滾輪放大畫面（倍率約 ×1.6 以上）時出現，兩者不會同時疊在一起。</p>
+        <label class="ctrl">
+          <span><span data-i18n="micro.zoom">觀察倍率</span> <b data-val="sharedSettings.zoom"></b></span>
+          <input type="range" min="1" max="12" step="0.05" value="1" data-bind="sharedSettings.zoom" data-camera="zoom" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="micro.cellAspect">甲藻長寬比</span> <b data-val="sharedSettings.cellAspect"></b></span>
+          <input type="range" min="0.18" max="0.48" step="0.01" value="0.32" data-bind="sharedSettings.cellAspect" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="micro.coreAmount">中央核強度</span> <b data-val="sharedSettings.coreAmount"></b></span>
+          <input type="range" min="0" max="1" step="0.01" value="0.78" data-bind="sharedSettings.coreAmount" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="micro.restingVisible">未發光可見度</span> <b data-val="sharedSettings.restingVisible"></b></span>
+          <input type="range" min="0" max="1" step="0.01" value="0.88" data-bind="sharedSettings.restingVisible" />
+        </label>
+      </details>
+
+      <details>
+        <summary data-i18n="env.title">環境參數</summary>
+        <label class="ctrl">
+          <span><span data-i18n="env.flowSpeed">水流速度</span> <b data-val="sharedSettings.flowSpeed"></b></span>
+          <input type="range" min="0" max="0.6" step="0.005" value="0.12" data-bind="sharedSettings.flowSpeed" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="env.flowScale">流場尺度</span> <b data-val="sharedSettings.flowScale"></b></span>
+          <input type="range" min="0.0006" max="0.008" step="0.0001" value="0.0022" data-bind="sharedSettings.flowScale" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="env.flowStrength">流場強度</span> <b data-val="sharedSettings.flowStrength"></b></span>
+          <input type="range" min="0" max="0.28" step="0.005" value="0.075" data-bind="sharedSettings.flowStrength" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="env.damping">阻尼係數</span> <b data-val="sharedSettings.damping"></b></span>
+          <input type="range" min="0.86" max="0.985" step="0.001" value="0.942" data-bind="sharedSettings.damping" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="env.bgDark">背景暗度</span> <b data-val="sharedSettings.bgDark"></b></span>
+          <input type="range" min="0.3" max="1" step="0.01" value="0.84" data-bind="sharedSettings.bgDark" data-layout="bg" />
+        </label>
+        <label class="ctrl">
+          <span><span data-i18n="env.grain">噪點強度</span> <b data-val="sharedSettings.grain"></b></span>
+          <input type="range" min="0" max="0.5" step="0.01" value="0.14" data-bind="sharedSettings.grain" />
+        </label>
+      </details>
+
+      <details open>
+        <summary data-i18n="feat.title">功能選項</summary>
+        <label class="check">
+          <input type="checkbox" checked data-bind="sharedSettings.showNoise" />
+          <span data-i18n="feat.showNoise">顯示噪點</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" data-bind="sharedSettings.showFps" />
+          <span data-i18n="feat.showFps">顯示幀率</span>
+        </label>
+        <div class="btn-row">
+          <button type="button" class="ghost" id="btn-pause">暫停動畫</button>
+          <button type="button" class="ghost" id="btn-reset" data-i18n="feat.reset">恢復預設參數</button>
+        </div>
+        <button type="button" class="ghost" id="btn-random" data-i18n="feat.random">隨機生成參數</button>
+        <button type="button" class="ghost" id="btn-clear-glow" data-i18n="feat.clearGlow">清除發光</button>
+        <button type="button" class="ghost" id="btn-fullscreen-panel">全螢幕顯示</button>
+        <p class="note" data-i18n="feat.fullscreenNote">全螢幕後只顯示作品畫面，按 Esc 退出。</p>
+      </details>
+
+      <details open>
+        <summary data-i18n="export.title">匯出圖片</summary>
+        <p class="note" data-i18n="capture.note">創作時按空格鍵保留當前畫面，最多 4 張，可繼續劃。結束後再點下方查看，選圖並選尺寸後匯出。</p>
+        <p class="note" id="capture-count">已保留 0 / 4</p>
+        <div id="capture-thumbs" class="capture-thumbs" aria-label="已保留畫面"></div>
+        <button type="button" class="ghost" id="btn-review" data-i18n="capture.review">結束交互，查看截圖</button>
+        <button type="button" class="primary" id="btn-export" data-i18n="export.png">匯出當前畫面 PNG</button>
+        <p class="note" data-i18n="export.note">「匯出當前畫面」輸出此刻畫布（1920 × 1080）。保留的截圖請在查看裡選圖、選尺寸後再匯出。不含控制面板。</p>
+      </details>
+
+      <p class="foot" data-i18n="foot">圖片僅在瀏覽器本機處理，不會上傳到伺服器。</p>
+    </aside>
+
+    <button type="button" id="btn-expand" class="expand-btn" hidden data-i18n="expand">參數</button>
+  </div>
+
+  <div id="review-overlay" class="review-overlay" hidden>
+    <div class="review-sheet" role="dialog" aria-modal="true" aria-labelledby="review-title">
+      <h2 id="review-title" data-i18n="capture.reviewTitle">已保留的畫面</h2>
+      <p class="note" data-i18n="capture.reviewHint">點選一張，再選擇匯出尺寸，然後匯出 PNG。關閉後可繼續創作。</p>
+      <div id="review-grid" class="review-grid"></div>
+      <label class="ctrl review-size">
+        <span><span data-i18n="export.size">匯出尺寸</span></span>
+        <select id="export-size">
+          <option value="1280">1280 × 720</option>
+          <option value="1920" selected>1920 × 1080</option>
+          <option value="3840">3840 × 2160</option>
+        </select>
+      </label>
+      <div class="review-actions">
+        <button type="button" class="primary" id="btn-review-export" data-i18n="capture.exportSelected">匯出選中 PNG</button>
+        <button type="button" class="ghost" id="btn-review-remove" data-i18n="capture.remove">移除這張</button>
+        <button type="button" class="ghost" id="btn-review-clear" data-i18n="capture.clear">清空全部</button>
+        <button type="button" class="ghost" id="btn-review-close" data-i18n="capture.continue">繼續創作</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="p5.min.js"></script>
+  <script src="i18n.js?v=20260903c"></script>
+  <script src="handcam.js?v=20260903c"></script>
+  <script src="sketch.js?v=20260903c"></script>
+  <script>
+    if (location.protocol === "file:") {
+      const msg = typeof t === "function" ? t("toast.handFile") : "请双击本资料夹中的「打开作品.bat」，用 http://127.0.0.1:8787/ 打开。不要直接打开 HTML 文件。";
+      const p = document.createElement("p");
+      p.setAttribute("style", "position:fixed;left:16px;top:16px;z-index:20;max-width:36em;padding:12px 14px;background:#071018;color:#c5e4f4;border:1px solid #4aa6d4");
+      p.textContent = msg;
+      document.body.insertBefore(p, document.body.firstChild);
+    }
+    if (typeof p5 === "undefined") {
+      const msg = typeof t === "function" ? t("p5Fail") : "繪圖庫沒有載入成功。請雙擊本資料夾中的「打开作品.bat」，或在瀏覽器開啟 http://127.0.0.1:8787/";
+      const p = document.createElement("p");
+      p.setAttribute("style", "position:fixed;left:16px;top:16px;z-index:20;max-width:36em;padding:12px 14px;background:#071018;color:#c5e4f4;border:1px solid #4aa6d4");
+      p.textContent = msg;
+      document.body.insertBefore(p, document.body.firstChild);
+    }
+  </script>
+</body>
+</html>

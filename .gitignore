@@ -35,5 +35,8 @@ node_modules/
 .venv/
 __pycache__/
 
+# MediaPipe models / WASM downloaded by serve.py (too large for git)
+my_work/tools/bioluminescent_tide/vendor/
+
 # FUSE mount artefacts (created when files are edited through the desktop bridge)
 .fuse_hidden*
