@@ -21,32 +21,76 @@ Handwritten source (session 1, by hand): `dondi2022_handwritten.jpg`
 
 ## 1 · Why this paper
 
-Your interest in this paper, author or topic. One or two sentences. If it came from a citation chain, say which paper led you here.
+我想了解互动系统中艺术作品的图像如何影响人：影响哪些方面，又通过哪些方面产生影响。
 
 ## 2 · Summary
 
+手写一页（session 1）的概述：
+
 This paper proposes a gaze-based interactive system for exploring artwork imagery. The system includes a backend tool for experts (Active Area Selector, for defining regions of interest and multimedia content in images) and a frontend application for visitors (Gaze-based Artwork Explorer, GAE, which supports zoom, pan, and triggering of multimedia content through gaze). Experiments show that the system is usable, intuitive, and effective, serving not only as an assistive technology for people with motor impairments but also as a safe alternative to touch screens in museums during the pandemic.
+
+以下按全文结构展开（学生补充）。
+
+**研究背景与动机。** 自 20 世纪 90 年代以来，计算机图形学等技术已用于文化遗产的数字化、修复与展示；近年互动与沉浸式技术（AR、VR、严肃游戏）被用来提升博物馆体验。眼动追踪作为非接触交互，可以吸引观众、为运动障碍者提供无障碍访问，并在疫情期间避免触摸公共屏幕。作者团队 2015 年在「帕维亚战役」展览部署过眼动系统，超过 2000 名访客，验证了可行性，也暴露了教程过长、按钮布局不合理、意外滚动等问题。
+
+**系统目标与架构。** 目标是一套可部署于任何博物馆或展览的灵活系统：专家定义内容，访客用眼动交互。后端包括 ActiveArea Selector（策展人为图像绘制感兴趣区域 / Active Areas，并关联文本、图像、音频、视频；支持多语言与区域分组 Levels）和 Settings Panel（管理员设定颜色、停留时间、缩放速度、区域行为）。前端是 Gaze-based Artworks Explorer (GAE)：选图、缩放、平移、发现并触发活跃区域的多媒体，以及寻找全部活跃区域的游戏化奖励。
+
+**交互流程与设计原则。** 原则：直观、通用、鲁棒。从 Idle（选语言、进主页或教程）到约 90 秒视频教程（相对 2015 版去掉交互操作以缩短学习时间），再到 Home（缩略图选作品）。Visualization 是核心：注视图像约 2 秒出现缩放按钮；缩放后出现四向平移箭头；活跃区域注视时蓝色高亮，首次发现有祝贺与剩余数量，全部发现后显示奖杯；注视后出现播放按钮，弹出多媒体时图像半透明、仅该区域清晰；可用 Levels 切换组别。按钮较大、间距合理以补偿眼动误差；默认停留 1 秒（按钮）或 2 秒（显示缩放）；10 秒检测不到用户则回到 Idle。
+
+**用户研究。** 后端：7 人（5 男 2 女，平均 42 岁），完成打开图像、绘制编辑区域、添加多媒体、保存等，平均 SUS 89.3（A+）。前端：33 人（21 男 12 女，22–71 岁），仅 7 人有眼动经验；任务为选 *Bacchus*（Caravaggio）、缩放到右肩、平移到右手、恢复尺寸、找到 3 个活跃区域并触发内容、回主页。平均 1 分 32 秒（SD 25）；3 人因校准（眼镜或蓝眼睛）约 2.5 分钟，排除后平均 1 分 25 秒（SD 15）。Likert（5 级）：界面直观 4.67，易学 4.79，眼动舒适度 4.09（争议最大），响应 4.18，任务易用 4.82，推荐 4.70，学习效果 4.55，适合博物馆 4.70。作者结论：易学、有效、鲁棒，多数人认为适合博物馆。
+
+**作者的结论与其自述的后续工作。** 完整工作流从内容定义到访客体验；既是运动障碍者的无障碍方案，也是触摸屏的安全替代。前景包括吸引年轻观众、家庭中无法到馆的严重运动障碍者。作者列出的后续：更多眼动仪、新功能、更多实地（含馆内）测试、探索无需校准的版本。
+
+**文中术语（备查）。** Eye tracking：红外检测注视方向。Fixation：相对静止期（100–600 ms）。Saccade：眼跳（短于 100 ms）。Dwell time：注视足够久后触发。Midas Touch：无法区分「看」与「操作」。Active Area：预定义可交互区域。GAE：前端应用。SUS：系统可用性量表。
 
 ## 3 · Critical thinking
 
-- **What limitations do you identify?** Beyond the ones the authors concede.
-- **Are there problems with the authors' assumptions?**
-- **What about applicability, effectiveness and scalability?**
+**未被明确承认的限制。** 交互模式的「游戏化」可能分散注意力；对多用户和社交互动的支持不足；对「误触」问题的解决不够全面。
 
-> Generic critique — "small sample," "needs more testing" — scores 2 on the rubric.
-> Name a limitation the paper does not concede, or do not write this section.
+**作者假设上的问题。** 假设用户对「游戏化」探索有普遍兴趣；假设「短时间使用」是博物馆交互的唯一模式。
+
+**适用性。** 优势：对无障碍访问（运动障碍人士）和疫情期间的安全交互，有明确价值。局限：对光线条件、用户面部特征（眼镜、瞳色）高度敏感——作者也提到校准问题——这限制了在博物馆复杂照明下的稳定部署。系统要求用户坐在固定位置，对需要站立或移动的大型画廊适用性较差。
+
+**有效性。** 优势：用户研究显示任务完成度高、易学。局限：生态效度有限。测试在实验室进行，用户被要求完成特定任务（如「缩放至右肩」）。真实博物馆里动机、分心程度、浏览的随意性都不同。自由探索下用户是否会主动发现所有区域、是否会为找到区域而做有意义的平移，并未得到验证。
+
+**可扩展性。** 技术上，作者提到将支持更多眼动仪，但未讨论不同屏幕尺寸、分辨率或与触摸屏集成。若部署到大型投影或平板，现有箭头按钮的大小和位置可能要重做。内容管理上，ActiveArea Selector 靠专家手绘矩形区域，对细节极多的画作工作量大、主观性强。论文未讨论自动或半自动的感兴趣区域检测；展览若有数百幅画，这会成为维护瓶颈。
+
+**小结。** 除作者已承认的小样本和需要更多实地测试外，不足还在：游戏化相对纯粹欣赏的初衷、对多用户场景的忽视、光线与用户特征上的鲁棒性。关键假设——用户喜欢被引导的「寻宝」体验、交互都是短时孤立的——面对多样化博物馆观众时可能不成立。系统在无障碍和安全性上有价值，但在真实、开放、更长时间的艺术体验里，适用性和有效性仍需更贴近现场的实验来验证。
 
 ## 4 · Creative thinking
 
-- **What new ideas did this spark?**
-- **Could the method apply to a different problem?**
-- **Could you propose a different method for the same problem?**
-- **Any other direction this opened?**
+**这激发了哪些新想法？**
+
+- **多模态融合。** 论文只用眼动作输入。可试「眼动 + 语音」或「眼动 + 轻触」：眼选区域，语音「播放」或「放大」，减少对停留时间的依赖。
+- **个性化。** 用注视时长、路径推断兴趣，实时调整内容——例如长时间注视某角色就弹出介绍，不必等用户主动触发。把眼动从控制工具升为意图理解工具。
+- **多人协作。** 现系统只支持单用户。可让多名访客同时注视不同区域、触发不同内容，或在教学里师生用注视共同标记关键元素。
+
+**这种方法能否用于其他问题？**
+
+- 教育与培训：医学影像、工程图纸、历史文献——注视特定结构即得到解释或动画。
+- 在线购物：注视商品图的领口、鞋底等细节，弹出材质、尺寸或视频。
+- 无障碍网页：运动障碍者注视图片、按钮或链接，触发朗读、放大或点击。
+
+**同一问题，能否用别的方法？**
+
+- 基于深度学习的无校准眼动：用普通 RGB 摄像头估注视点，免专用硬件。精度可能略低，部署更便宜。
+- 「注视 + 头部姿态」：眼选目标，点头/摇头确认或取消，替代停留触发，减少误触。
+- 情境感知自动推送：不再让用户主动找活跃区域，而用注视热图判断正在看哪一部分并推送相关内容（脸→简介，背景→场景说明）。
+
+**还打开了哪些方向？**
+
+- 眼动数据驱动的艺术鉴赏：比较普通观众与专家的注视路径与时长，讨论感知机制。
+- 参观行为与展览优化：哪些区域被忽略、哪些内容被反复触发，给策展提供数据。
+- 眼动 + 生成式 AI：注视选中元素，再用语音或文字提问，由语言模型回答，做成对话式探索。
 
 ## 7 · Take-home
 
-- What did you personally learn?
-- What was new to you?
-- What can you apply to your own research?
-- Is this a good writing sample to imitate structurally? Why?
-- Anything else?
+**个人学到什么。** 交互设计应优先考虑真实用户场景：作者在 2015 年展览里发现访客厌烦过长的交互式教程后，改成约 90 秒视频，并统一控件行为——公共展览里，简洁和学习成本往往比功能堆满更重要。「游戏化」要谨慎：用「找齐活跃区域」激励用户，却未讨论是否会让人只盯游戏目标而忽略欣赏。非游戏场景里，激励效果和核心体验之间要权衡。
+
+**有什么是新的。** 眼动从研究工具变成交互界面：从后端内容定义到前端实现，是一条完整的生产–消费工作流。把 COVID-19 卫生安全写成设计动机，也说明交互技术如何响应突发事件。
+
+**能用到自己研究里的。** 「后端–前端」分离：例如医学影像教学，教师在后端标注感兴趣区域并关联材料，学生在前端用眼动或触摸探索。针对「短交互、只用一次」的可用性评估：作者强调博物馆访客时间短、很少复用，这对公共装置或临时展览的测试设计有直接参考。
+
+**结构上值不值得模仿。** 值得当模板，但要看见它的缺口。优点：引言–背景–相关工作–系统–用户研究–结论，功能清楚；用「问题–解决方案」写 Visconti Castle 的三个问题再在新系统里逐条回应；用户研究给出 SUS、均值、标准差、完成时间，并引用 Bangor 等的形容词评级。局限：自我批判不够深（游戏化副作用、实验室与现场的生态效度）；后端 7 人、前端 33 人，规模中等偏小——模仿时要补批判，并说明小样本为何在本研究里说得通，或尽量加大样本。
+
+**还有。** 眼动仪价格从一万五千美元以上降到不到三百美元，实验室技术走进博物馆和家庭；研究应更关注低成本、易部署的方案。作者来自计算机科学，内容却要和策展人一起定义——ActiveArea Selector 的目标之一是「不熟悉技术的人也能用」。跨学科项目里，面向非技术用户的工具体验，往往决定项目能不能落地。
