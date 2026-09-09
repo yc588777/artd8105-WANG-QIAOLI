@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 Set-Location -LiteralPath $PSScriptRoot
 $url = "http://127.0.0.1:8787/"
-$online = "https://yc588777.github.io/artd8105-WANG-QIALI/"
+$online = "https://yc588777.github.io/artd8105-WANG-QIAOLI/"
 
 function Get-TideHeader {
   try {
