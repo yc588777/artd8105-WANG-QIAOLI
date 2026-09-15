@@ -1,0 +1,8 @@
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+}

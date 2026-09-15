@@ -1,0 +1,60 @@
+:root {
+  --ink-950: #08090a;
+  --ink-900: #111315;
+  --graphite: #26292c;
+  --ash: #8d9295;
+  --paper: #eeede8;
+  --paper-bright: #faf9f5;
+  --signal-coral: #f06455;
+  --signal-blue: #315bff;
+  --signal-lime: #9aff4a;
+  --signal-yellow: #f2e85c;
+  --line-dark: rgba(255, 255, 255, 0.18);
+  --line-light: rgba(8, 9, 10, 0.22);
+  --nav-w: 72px;
+  --learn-w: 250px;
+  --inspect-w: 300px;
+  --status-h: 36px;
+  --foot-h: 96px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --radius: 4px;
+  --font-display: "Archivo Black", "Noto Sans SC", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-body: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  --font-code: "Space Mono", ui-monospace, monospace;
+  --bg: #08090a;
+  --bg-elev: #111315;
+  --panel: #0d0f11;
+  --ink: #eeede8;
+  --muted: #8d9295;
+  --line: rgba(255, 255, 255, 0.18);
+  --field: #050607;
+  --focus: #315bff;
+}
+
+[data-theme="lab"] {
+  --bg: var(--ink-950);
+  --bg-elev: var(--ink-900);
+  --panel: #0d0f11;
+  --ink: var(--paper);
+  --muted: var(--ash);
+  --line: var(--line-dark);
+  --field: #050607;
+  --focus: var(--signal-blue);
+}
+
+[data-theme="archive"] {
+  --bg: var(--paper);
+  --bg-elev: var(--paper-bright);
+  --panel: #e6e4dc;
+  --ink: var(--ink-950);
+  --muted: #5c6164;
+  --line: var(--line-light);
+  --field: #f3f2ec;
+  --focus: var(--signal-lime);
+}
