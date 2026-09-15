@@ -161,7 +161,7 @@ export function SpeechPanel({
       )}
       <h3>摄像头</h3>
       <p className="muted">
-        捕捉动态会改写全部图层，并同时驱动音高、时长、PITCH / DUR、声道参数与 TRACT。请用 localhost 打开。
+        捕捉动态会改写全部图层，并同时驱动音高、时长、PITCH / DUR、声道参数与 TRACT。需要安全上下文（本页 https，或本机 localhost）。
       </p>
       <Toggle label="捕捉动态" on={cameraOn} onChange={onCamera} />
       <video

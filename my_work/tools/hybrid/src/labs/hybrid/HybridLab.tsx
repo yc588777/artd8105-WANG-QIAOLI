@@ -15,7 +15,7 @@ import { SeededRandom } from "../../utils/seededRandom";
 import { AURA, drawAuraFilament, drawPyrocystis, worldInView } from "../../render/pyrocystis";
 import { auraLevel, setAuraEngine, setAuraTempo } from "../../utils/auraAudio";
 import type { LabMode } from "../../types";
-import { SpeechPanel, DEFAULT_SPEECH, type SpeechSettings } from "./SpeechPanel";
+import { SpeechPanel, DEFAULT_SPEECH, LYRIC_PRESETS, type SpeechSettings } from "./SpeechPanel";
 import { SpeechEngine, compileLyrics } from "./speech/engine";
 import { IDLE_MOTION, MotionTracker } from "./speech/motion";
 import { drawSpeechOverlay } from "./speech/overlay";
@@ -176,6 +176,39 @@ export function HybridLab() {
     setMix(n);
     useLabPersist.getState().setLab("hybrid", n);
   };
+
+  const recreateOriginal = () => {
+    engine.current.stop();
+    setTapeOn(false);
+    setCameraOn(false);
+    setWanderOn(false);
+    setSpeech({ ...DEFAULT_SPEECH });
+    const next = defaultMix();
+    commitMix(next);
+    liveMix.current = next;
+    wanderRef.current = null;
+    reboot();
+    setLog("ORIGINAL · Computer Speech · He saw the cat");
+  };
+
+  const varyLyric = (text: string) => {
+    setSpeech({ ...DEFAULT_SPEECH, text });
+    setLog(`VARIATION · lyric · ${text}`);
+  };
+
+  const d0 = defaultMix();
+  const isOriginal =
+    speech.text === DEFAULT_SPEECH.text &&
+    speech.sing === DEFAULT_SPEECH.sing &&
+    !wanderOn &&
+    !cameraOn &&
+    mix.layers.flock === d0.layers.flock &&
+    mix.layers.grow === d0.layers.grow &&
+    mix.layers.diff === d0.layers.diff &&
+    mix.layers.cell === d0.layers.cell &&
+    mix.layers.gene === d0.layers.gene &&
+    mix.couples.trailsToDiff &&
+    mix.couples.tipsFeedDiff;
 
   const reboot = () => setBootKey((k) => k + 1);
 
@@ -634,6 +667,36 @@ export function HybridLab() {
       }
       inspector={
         <>
+          <h3>设计系统 / DESIGN SYSTEM</h3>
+          <p className="muted">
+            原作：Bell Labs《Computer Speech》（1963）把 He saw the cat 念成 Hee Saw Dhuh Kaet。一键回到默认混成（蜂群 + 生长 + 化学，梭梨甲藻）与默认歌词。变体改写底层规则，不是滤镜。
+          </p>
+          <div className="seg">
+            <button type="button" className={isOriginal ? "active" : ""} onClick={recreateOriginal}>
+              原作 ORIGINAL
+            </button>
+            <button
+              type="button"
+              className={speech.text === LYRIC_PRESETS[2]!.text ? "active" : ""}
+              onClick={() => varyLyric(LYRIC_PRESETS[2]!.text)}
+            >
+              变体 · Daisy
+            </button>
+            <button
+              type="button"
+              className={speech.text === LYRIC_PRESETS[3]!.text ? "active" : ""}
+              onClick={() => varyLyric(LYRIC_PRESETS[3]!.text)}
+            >
+              变体 · 他看见猫
+            </button>
+            <button
+              type="button"
+              className={wanderOn ? "active" : ""}
+              onClick={() => setWanderOn((on) => !on)}
+            >
+              {wanderOn ? "变体 · 随机规则 ON" : "变体 · 随机规则"}
+            </button>
+          </div>
           <SpeechPanel
             settings={speech}
             onSettings={setSpeech}
