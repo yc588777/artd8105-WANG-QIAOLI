@@ -14,7 +14,7 @@ I keep circling living systems that stay dark until they are disturbed, and then
 ## Where it came from
 
 - Artefact: `my_work/tools/bioluminescent_tide/` — *Fluorescent Tide: Bioluminescent Sea Sparkle* (free sea / pattern wake / body wake).
-- Artefact: `my_work/tools/hybrid/` — HYBRID.06, the Session 4 system. Default mix recreates the pyrocystis overlay of flock + L-system + Gray–Scott; lyrics recreate Bell Labs *Computer Speech* (*He saw the cat* → `H—EE—S—AW—DH—UH—K—AE—T`); camera and random vision make variations.
+- Artefact: `my_work/tools/hybrid/` — HYBRID.06, the Session 4 system. Live: https://yc588777.github.io/artd8105-WANG-QIAOLI/explorer/ (home) and https://yc588777.github.io/artd8105-WANG-QIAOLI/explorer/#/hybrid (lyric text input). Default mix recreates the pyrocystis overlay of flock + L-system + Gray–Scott; lyrics recreate Bell Labs *Computer Speech* (*He saw the cat* → `H—EE—S—AW—DH—UH—K—AE—T`); camera and random vision make variations.
 - Instruction lineage: `my_work/instruction.md` versions 2–4 (rule given to another person, then to a generator).
 - Reading notes: `my_work/reading_notes/galanter2003.md` (generative art as an autonomous system; complexity between order and disorder); `my_work/reading_notes/xu2025.md` (care, implicit bonding, CHI 2025 — the conversation I named when I chose that paper).
 

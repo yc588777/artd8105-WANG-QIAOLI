@@ -22,14 +22,28 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: my_work/tools/hybrid/package-lock.json
+      - name: Build algorithm explorer
+        working-directory: my_work/tools/hybrid
+        env:
+          VITE_BASE: /artd8105-WANG-QIAOLI/explorer/
+        run: |
+          npm ci
+          npm run build
       - name: Prepare site
         run: |
-          mkdir -p site
+          mkdir -p site/explorer
           rsync -a --exclude vendor --exclude '*.bat' --exclude '*.ps1' --exclude serve.py \
             my_work/tools/bioluminescent_tide/ site/
+          rsync -a my_work/tools/hybrid/dist/ site/explorer/
           cp index.html site/redirect-from-repo-root.html
           printf '%s\n' '/*    /index.html   200' > site/_redirects
           touch site/.nojekyll
+          touch site/explorer/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

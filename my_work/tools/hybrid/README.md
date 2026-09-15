@@ -2,7 +2,12 @@
 
 Session 4 homework: a Cursor-built design system that can recreate the original mix (flock + growth + reaction–diffusion, pyrocystis drawing) and then vary the rules into new works (lyrics → Kelly–Gerstman phoneme cards → tract synthesis; camera motion rewriting picture and sound; random-vision wander).
 
-This is the system that locally ran at `http://localhost:5173/hybrid`. **Do not submit localhost.** The instructor opens this folder from the course repository.
+This is the system that locally ran at `http://localhost:5173/` (home) and `http://localhost:5173/hybrid` (HYBRID.06 lyric text input). **Do not submit localhost.**
+
+**Open online (same as the local site):**  
+https://yc588777.github.io/artd8105-WANG-QIAOLI/explorer/  
+HYBRID.06 text input:  
+https://yc588777.github.io/artd8105-WANG-QIAOLI/explorer/#/hybrid
 
 ## Run
 
