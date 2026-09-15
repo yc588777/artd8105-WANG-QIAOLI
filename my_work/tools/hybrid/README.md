@@ -4,7 +4,8 @@ ARTD8105 · 汪俏黎 / WANG QIALI
 
 This folder is the Cursor-built **design system** for Session 4 assignment 1. It is the public stand-in for `http://localhost:5173/hybrid`. **Do not submit localhost.**
 
-Full statement (wall label, original work, recreate / vary, default recipe): **`设计说明.md`**.
+Full statement (wall label, original work, recreate / vary, default recipe): **`设计说明.md`**.  
+Recreate / vary stills: **`evidence/`**.
 
 Declarations for assignment 2: `my_work/topic.md`.
 
