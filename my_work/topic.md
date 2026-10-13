@@ -40,3 +40,17 @@ The smallest version that would still surprise me: a dark field of pyrocystis th
 ## The pairing sentence
 
 I am going to make a live pyrocystis field that can also speak a punched-card lyric, using a browser system with camera motion and Kelly–Gerstman tract controls, and it would tell someone in generative art (and, if I keep the CHI thread, in HCI) that light and voice here are a living response to disturbance, not an effect drawn on top of the picture.
+
+---
+
+## 2026-10-13 · 项目已转向（用学生自己的项目名和文献稿）
+
+**旧声明不再作为 11 月造物与投稿的描述。** Session 4 的夜光虫 / HYBRID.06 仍是本学期做过的系统，但 Session 7–8 选定的毕业向项目是：
+
+**海棠经纬——面向数字制造的参数化竹编扇生成系统（HAITANG WEAVE LAB）**
+
+- **将做的：** 一把海棠形刚性手扇（不是折扇），扇面编织由参数重算，边框锁定，导出可 3D 打印的网格。
+- **用什么：** 本机生成器 http://127.0.0.1:5173 ；学院 DZ 13-103 树脂 / FDM 打印机。
+- **告诉谁、什么：** 告诉 DIS / 数字工艺方向的人：非凸闭合硬边界上的连续编织，可以按 3D 打印约束实时生成，而不是铺网再布尔剪断。
+- **领域：** 从“生成艺术 + 活体输入”转到 **HCI / 数字工艺 / 个人制造**。主投 ACM DIS 2027 Papers。
+- **为什么改：** week_7 文献核验表明，夜光交互与竹编硬边界打印不是同一缺口；可辩护、可打印、可写成 method 的是后者。HYBRID.06 与 Fluorescent Tide 留在 `my_work/tools/` 作为本学期过程证据，不再当作 25 Nov 展览物件。
