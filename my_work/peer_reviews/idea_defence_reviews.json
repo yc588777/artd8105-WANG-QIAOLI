@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "course": "ARTD8105",
+  "session": 8,
+  "session_date": "2026-10-14",
+  "reviewer_name": "WANG QIAOLI",
+  "exported_at": "2026-10-14T05:03:37.438Z",
+  "reviews": [
+    {
+      "id": "699b3837-baa3-4716-8e71-1f9eb9d68cb0",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "JIANG YUHAN",
+      "project_title": "from unexpected from to design possibility",
+      "contribution": "This project proposes an intermediate, practice-based framework that explains how AI-generated semantic deviations can trigger abductive reasoning, meaning reconstruction, and reflective design decisions in human–AI co-creation, demonstrated through six parametrically generated 3D-printed objects.",
+      "strongest_support": "Each of the six objects retains its parameters, dimensions, and formal evolution, allowing deviations to be traced rather than treated as random errors. These records connect specific asymmetric rules and semantic ruptures to the designer’s subsequent reinterpretation and design decisions.",
+      "main_challenge": "The claim that semantic deviation triggers abductive reasoning currently relies mainly on the designer’s own interpretation and lacks independent evidence. It could be strengthened through a systematic comparison of the six objects, a documented reflective protocol, and feedback from external designers or researchers.",
+      "created_at": "2026-10-14T03:30:25.156Z",
+      "updated_at": "2026-10-14T03:30:25.156Z"
+    },
+    {
+      "id": "e4c1bc6d-f856-4458-a141-389c02cef9e7",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "Jiafeng Qu",
+      "project_title": "a wall-scale pond of light, generated live from a checked eDNA corpus — the case, not the contribution",
+      "contribution": "The project contributes a three-layer framework—negotiated legibility, four rights of withholding, and evidence-graded provenance—for designing interfaces that communicate uncertainty without inventing biological presence. The wall-scale pond of light generated from a verified eDNA corpus is the case through which this framework is tested, not the contribution itself.",
+      "strongest_support": "The strongest support is the necessity test: without constructing the pond, the project cannot demonstrate that an evidential limit can function simultaneously as a machine state and a public interface. Its five controls alter the visual environment while exposing how each interaction spends a different form of certainty.",
+      "main_challenge": "The principle of withholding still depends on the designer deciding what evidence viewers are allowed to access. The argument would be strengthened by documented viewer walk-throughs and failure-mode analysis showing when each restriction clarifies uncertainty, becomes confusing, or reinforces excessive designer authority.",
+      "created_at": "2026-10-14T03:34:22.946Z",
+      "updated_at": "2026-10-14T03:34:22.946Z"
+    },
+    {
+      "id": "6da20055-1027-4e61-b3db-f3ec6999e17d",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "JINGTONG ZHAO",
+      "project_title": "SIX SHEETS.ONLY THE LINE WEIGHT CHANGES",
+      "contribution": "The project contributes an annotated-portfolio method for identifying the physical threshold at which geometrically distinct signs become visually indistinguishable through changes in line weight. The six sheets make visible how material production conditions can determine whether a geometric alphabet continues to function as a language.",
+      "strongest_support": "The strongest support is the controlled comparison across six sheets: the geometric rule remains unchanged, while only the line weight varies. This isolates the moment when lines that remain separate on screen merge after physical production, making the machine’s minimum printable gap observable.",
+      "main_challenge": "The proposed threshold may vary according to the machine, material, production settings, and viewing distance, while the physical tests have not yet been completed. The claim would be strengthened through calibrated fabrication, repeated trials, and an independent recognition test showing when viewers can no longer distinguish the signs.",
+      "created_at": "2026-10-14T03:46:53.431Z",
+      "updated_at": "2026-10-14T03:46:53.431Z"
+    },
+    {
+      "id": "978e967f-7f67-4d6f-bb70-7cfff5b03b61",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "wenjie xu",
+      "project_title": "TraceWithin",
+      "contribution": "The project contributes a research-through-design method for examining how the duration of visible breath traces and the gradual withdrawal of guidance jointly influence independent mindfulness practice. Its contribution is the temporal feedback mechanism and matched comparison protocol, rather than the VR experience itself.",
+      "strongest_support": "The strongest support is the matched 2 × 2 comparison of immediate versus persistent feedback and continuous versus withdrawn guidance, followed by the same task without feedback. This design directly tests whether support improves independent practice or instead increases workload and technological dependence.",
+      "main_challenge": "The proposed contribution currently lacks empirical evidence because the prototype and pilot study have not yet been completed. It would be strengthened by preregistered outcome criteria, reliable respiratory recordings, validated attention measures, and a common transfer test conducted both inside and outside VR.",
+      "created_at": "2026-10-14T03:53:11.363Z",
+      "updated_at": "2026-10-14T03:53:11.363Z"
+    },
+    {
+      "id": "8ef3bf31-2c21-4540-b7e4-154a827ce39e",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "jinyu huang",
+      "project_title": "\"memories\"of the sea",
+      "contribution": "This project contributes an analytical framework explaining how textual content, attribution, material form, spatial arrangement, and public participation collectively establish commemorated subjects and produce—or fail to produce—monumentality. The Macau street-name installation is a design case used to test this framework, rather than being the contribution itself.",
+      "strongest_support": "The strongest support is the comparative analysis of Jenny Holzer’s VIGIL and Doris Salcedo’s Quebrantos, which examines concrete differences in naming, attribution, authorization, and public action. Applying the same analytical dimensions to the Macau prototype creates a clear connection between theoretical analysis and design practice.",
+      "main_challenge": "The main unsupported claim is that temporariness, visibility, and participation can collectively generate monumentality, because there is not yet enough evidence of how audiences interpret the installation. The project could be strengthened through consistent cross-case criteria and public evaluation methods, such as observation, interviews, or documented participant responses.",
+      "created_at": "2026-10-14T04:00:56.926Z",
+      "updated_at": "2026-10-14T04:00:56.926Z"
+    },
+    {
+      "id": "05ee56e0-bce2-48ce-b670-b8f021ccbb1b",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "liulin、jinshan",
+      "project_title": "beyond patterns:the hidden bodily knowledge in lantian dai-zai weaving",
+      "contribution": "This project contributes a three-step field method for identifying the tacit bodily judgements—such as tension, tightness, and humidity—that conventional video archives fail to capture. Its annotated woven samples also provide a practical reference for future heritage documentation and digital translation.",
+      "strongest_support": "The strongest evidence is the comparison between the master and novice, showing that copying visible hand movements reproduced only 60% of the original weaving density. Recording errors, reworking processes, and “feel”-based explanations convincingly reveals the hidden judgements behind the craft.",
+      "main_challenge": "The main challenge is demonstrating that the proposed method can reliably identify tacit knowledge rather than merely collect subjective interview accounts. Testing it with more weavers, materials, and weaving contexts would strengthen its validity and wider applicability.",
+      "created_at": "2026-10-14T04:08:51.627Z",
+      "updated_at": "2026-10-14T04:08:51.627Z"
+    },
+    {
+      "id": "f9709ba8-808d-4b30-878a-73ce60b033c0",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "angelica zhang",
+      "project_title": "From AI-Generated Parts to Physical Sculpture: Selection, Rejection, and Assembly in Human–AI Co-Creation",
+      "contribution": "This project shows how human creativity emerges after AI generation through the selection, rejection, physical interlocking, and composition of generated parts. It contributes a materially grounded account of human agency in transforming disconnected AI outputs into a coherent sculpture.",
+      "strongest_support": "The strongest support is the completed 3D-printed sculpture together with documented records of rejected components, selection decisions, and assembly iterations. This evidence makes the human contribution traceable rather than treating the final artifact alone as proof.",
+      "main_challenge": "The main challenge is distinguishing meaningful creative judgement from ordinary curation or practical problem-solving. The project needs explicit criteria for analysing why components were selected or rejected and how those decisions shaped the sculpture’s visual rhythm, movement, and coherence.",
+      "created_at": "2026-10-14T04:14:59.629Z",
+      "updated_at": "2026-10-14T04:14:59.629Z"
+    },
+    {
+      "id": "531c4ae3-4b37-4045-a30d-18c875ed2b90",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "Joanna Junying Yan",
+      "project_title": "Parametric Decoding in History: Correspondences between Geometric Shapes and Historical Sites in the 1889 Praia Grande",
+      "contribution": "This project contributes an evidence-based parametric coding method that translates five historical variables—weight, scale, radius, defence, and decay—into coordinate-registered 3D geometry. By overlaying this geometry with the 1889 fabric map, it makes the visual gap between documentary authority and historical erasure the central argument.",
+      "strongest_support": "The strongest support is the direct alignment of the documentary map and the white 3D geometry on the same geographical coordinates. The traceable connection between historical evidence, coding rules, and material output allows the object itself to function as an argument rather than mere visualization.",
+      "main_challenge": "The main challenge is proving that the five parameters are historically justified rather than subjective formal interpretations. The project therefore needs verified sources and transparent coding rules explaining how each historical condition is translated into a specific geometric property.",
+      "created_at": "2026-10-14T04:20:25.189Z",
+      "updated_at": "2026-10-14T04:20:25.189Z"
+    },
+    {
+      "id": "b2a7691b-b330-4e0e-a499-b56d76749a96",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "Mei Xinyue and Pei Jialingren",
+      "project_title": "idal Rhythm: A Five-State Generative Lightbox",
+      "contribution": "This project contributes a reproducible five-state method—rising, slowing, ebb, still, and returning tide—for introducing planned rest into continuously running generative light installations. It translates the abstract idea of visual rest into controllable changes in motion, speed, and visual density.",
+      "strongest_support": "The strongest support is the full-cycle physical prototype combining a 3D-printed shell, diffuser, programmable RGB LEDs, and visible state transitions. This enables the relationship between timing, light diffusion, and perceived movement to be evaluated directly.",
+      "main_challenge": "The main challenge is demonstrating that five states create a more meaningful experience of rest than a simple active/rest switch. A comparative test and audience feedback would help define whether viewers can perceive each state and experience the intended tidal rhythm.",
+      "created_at": "2026-10-14T04:27:02.522Z",
+      "updated_at": "2026-10-14T04:27:02.522Z"
+    },
+    {
+      "id": "748238f6-7d68-4214-bdc6-0b24456a225c",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "Shiyu Lei",
+      "project_title": "Living Data Forest: Inhabiting More-than-Human Data",
+      "contribution": "This project contributes an enterable and playable “data forest” that transforms weather, bird, and species data from screen-based charts into evolving spatial forms. It also creates a circular data ecology in which visitors’ traces and sightings return to shape the forest.",
+      "strongest_support": "The strongest support is the complete pipeline connecting open data, nonhuman flocking algorithms, daily evolving forms, visitor participation, and printable objects. The use of site-specific data, including Cotai’s tides and spoonbill sightings, prevents the project from becoming a generic data-visualization tool.",
+      "main_challenge": "The main challenge is demonstrating that entering and interacting with the forest genuinely creates kinship with more-than-human beings. Comparative user evaluation is needed to show whether the embodied experience produces deeper understanding than conventional charts while avoiding claims that the system speaks for other species.",
+      "created_at": "2026-10-14T04:34:55.091Z",
+      "updated_at": "2026-10-14T04:34:55.091Z"
+    },
+    {
+      "id": "69b796c8-852f-4c04-bb36-abc5b34861be",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "Luo Wen",
+      "project_title": "Forest: AI Reinvented Nature",
+      "contribution": "This project contributes a comparative method for examining how authored mappings and independent AI interpretations of the same human behaviour generate different ecological responses. Its annotated portfolio makes interpretation visible as a design decision and develops practical knowledge for human–artificial-environment relationships.",
+      "strongest_support": "The strongest support is the controlled A/B comparison in which both systems receive the same observable behaviour and operate under identical ecological rules. Annotated visual evidence can clearly trace how different interpretations lead to different environmental consequences.",
+      "main_challenge": "The main challenge is defining and measuring “ecological response” clearly enough for the comparison to be reproducible. The project should specify the fixed rules, AI decision boundaries, and evaluation criteria, while explaining why the forest setting is necessary rather than merely illustrative.",
+      "created_at": "2026-10-14T04:42:13.176Z",
+      "updated_at": "2026-10-14T04:42:13.176Z"
+    },
+    {
+      "id": "9a1e9c93-8106-4cac-9f7f-68c08dc67ad8",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "Wen Xueying",
+      "project_title": "Neural Landscape: Live EEG as Artistic Material",
+      "contribution": "This project contributes an artist-led method in which live EEG features influence the birth, spread, connection, persistence, and decay of visual symbols. Its persistent visual memory allows earlier physiological changes to shape later forms, turning the artwork into an evolving process rather than a finished EEG image.",
+      "strongest_support": "The strongest support is the proposed controlled comparison using the same EEG input for direct appearance mapping and for a rules-plus-memory system. Documenting both outputs over time can reveal what persistent memory contributes aesthetically and behaviourally.",
+      "main_challenge": "The main challenge is that the system has not yet been tested with live EEG, so its claims currently depend on simulated data. The project must address signal noise and artefacts, specify the feature-to-behaviour mapping, and demonstrate why EEG produces meaningful feedback beyond generic generative art.",
+      "created_at": "2026-10-14T04:47:27.965Z",
+      "updated_at": "2026-10-14T04:47:27.965Z"
+    },
+    {
+      "id": "9a7e529a-5eb0-409e-912f-2cc111273b78",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "KANGQI SONG",
+      "project_title": "Compendium Fireworks: An L-System Game-Journey Sculpture",
+      "contribution": "This project contributes an annotated portfolio method that transforms an automatically recorded game journey—including movement paths, combat traces, and boss fireworks—into a physical sculpture. By comparing different playthroughs within the same L-system tree, it explores how players become creators of readable electronic artworks through play.",
+      "strongest_support": "The strongest support is the working Godot prototype, which captures player actions and exports the L-system tree, route, and combat events as one three-dimensional form. Producing three annotated sculptures from different routes on a fixed tree would clearly connect individual choices to visible formal differences.",
+      "main_challenge": "The main challenge is preserving route and combat legibility while producing a structurally stable and printable sculpture. The project must also demonstrate that players experience authorship over the result, rather than receiving an automatically generated souvenir with little intentional control.",
+      "created_at": "2026-10-14T04:59:02.608Z",
+      "updated_at": "2026-10-14T04:59:02.608Z"
+    },
+    {
+      "id": "11ee5427-8d27-4554-a5c1-8fa9d48c65bc",
+      "reviewer_name": "WANG QIAOLI",
+      "presenter_names": "ZHAI JIAYU",
+      "project_title": "Provisional Title: The Continuous Body That Delay Takes Away",
+      "contribution": "This project contributes an intermediate-level concept explaining how different photographic delays remove different aspects of continuous time. By pairing integration and sampling, it shows that one preserves continuity but loses bodily form, while the other preserves the body but deletes the intervals between moments.",
+      "strongest_support": "The strongest support is the paired production of two photographs from the same recorded duration and scene. This controlled comparison makes the temporal losses of exposure-based integration and computational sampling directly visible.",
+      "main_challenge": "The main challenge is proving that the perceived differences result from the two temporal methods rather than changes in framing, motion, lighting, or post-processing. The project should document identical capture conditions and test several scenes to demonstrate that the proposed concept extends beyond a single photographic pair.",
+      "created_at": "2026-10-14T05:03:25.773Z",
+      "updated_at": "2026-10-14T05:03:25.773Z"
+    }
+  ]
+}
