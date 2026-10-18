@@ -1,0 +1,142 @@
+{
+  "unified": true,
+  "one_piece": true,
+  "geometry_lock": "PASS",
+  "outer_silhouette": "PASS",
+  "guard_consistency": "PASS",
+  "handle_consistency": "PASS",
+  "printable_mesh": "PASS",
+  "path_continuity": "PASS",
+  "frame_anchor": "PASS",
+  "boolean_union": true,
+  "export_blocked": false,
+  "export_block_reason": "",
+  "boundary_edge_count": 0,
+  "non_manifold_edge_count": 0,
+  "connected_component_count": 1,
+  "interior_degree_one_node_count": 0,
+  "floating_component_count": 0,
+  "continuous_path_coverage": 1.0,
+  "min_thickness_mm": 2.2,
+  "rim_width_mm": 5.8,
+  "rim_depth_mm": 7.0,
+  "fixed_hash": "bff82a56323e9c1c04ddacf5999e0b4b643640c96a839d24fe9347f9eeb376fb",
+  "fixed_vertices": 183144,
+  "silhouette_deviation_mm": 0.0,
+  "width_mm": 113.93,
+  "height_mm": 180.0,
+  "thickness_mm": 13.05,
+  "aspect": 0.6329,
+  "reference_aspect": 0.66012,
+  "reference_depth_ratio": 0.05023,
+  "outline_aspect": 0.63294,
+  "aspect_error": 0.02718,
+  "thickness_ratio": 0.07247,
+  "target_width_mm": 118.82,
+  "target_depth_mm": 9.04,
+  "handle_length_mm": 74.46,
+  "guard_width_mm": 40.44,
+  "min_feature_mm": 2.75,
+  "curve_count": 183,
+  "crossing_count": 262,
+  "knot_count": 0,
+  "layer_count": 1,
+  "dropped_fragments": 0,
+  "short_fragment_count": 0,
+  "visible_endpoint_count": 0,
+  "interior_endpoint_count": 0,
+  "insufficient_embed_count": 0,
+  "path_discontinuity_count": 0,
+  "unanchored_strip_count": 0,
+  "removed_short": 0,
+  "removed_unanchored": 0,
+  "compatibility_warning": "",
+  "layer_curves": {
+    "L2": 183
+  },
+  "strip_thickness_mm": 2.2,
+  "crossings_preview": [
+    {
+      "id": "c0",
+      "x": -39.64,
+      "y": 96.03,
+      "over": "L2",
+      "under": "L2"
+    },
+    {
+      "id": "c1",
+      "x": -37.67,
+      "y": 94.55,
+      "over": "L2",
+      "under": "L2"
+    },
+    {
+      "id": "c2",
+      "x": -34.61,
+      "y": 92.08,
+      "over": "L2",
+      "under": "L2"
+    },
+    {
+      "id": "c3",
+      "x": -34.73,
+      "y": 91.8,
+      "over": "L2",
+      "under": "L2"
+    },
+    {
+      "id": "c4",
+      "x": -34.73,
+      "y": 101.12,
+      "over": "L2",
+      "under": "L2"
+    },
+    {
+      "id": "c5",
+      "x": -24.91,
+      "y": 118.22,
+      "over": "L2",
+      "under": "L2"
+    },
+    {
+      "id": "c6",
+      "x": -29.82,
+      "y": 118.13,
+      "over": "L2",
+      "under": "L2"
+    },
+    {
+      "id": "c7",
+      "x": -21.02,
+      "y": 123.5,
+      "over": "L2",
+      "under": "L2"
+    }
+  ],
+  "component_count": 2,
+  "bbox_min": [
+    -56.963,
+    0.0,
+    -6.522
+  ],
+  "bbox_max": [
+    56.964,
+    179.995,
+    6.523
+  ],
+  "fits_220": true,
+  "fits_256": true,
+  "triangles": 278228,
+  "step_mm": 0.28,
+  "pattern": "diamond",
+  "quality": "recommended",
+  "z_envelope_ok": true,
+  "xy_envelope_ok": true,
+  "warnings": [],
+  "digital_check_only": true,
+  "physical_print_tested": false,
+  "master": "E:\\UM\\UM-3\\ATTICUS\\homework\\week_7\\参数化扇子\\灰边团扇正面模板-1.stl",
+  "scale_matrix": 183.725464,
+  "note": "外框、双瓣护片和扇柄来自同一份母版三角面。图案只生成在内框里。",
+  "boundary_checked_in": "digital rebuild"
+}
