@@ -4,7 +4,7 @@
   "session": 8,
   "session_date": "2026-10-14",
   "reviewer_name": "WANG QIAOLI",
-  "exported_at": "2026-10-14T05:03:37.438Z",
+  "exported_at": "2026-10-21T15:22:33.559Z",
   "reviews": [
     {
       "id": "699b3837-baa3-4716-8e71-1f9eb9d68cb0",
@@ -159,6 +159,83 @@
       "main_challenge": "The main challenge is proving that the perceived differences result from the two temporal methods rather than changes in framing, motion, lighting, or post-processing. The project should document identical capture conditions and test several scenes to demonstrate that the proposed concept extends beyond a single photographic pair.",
       "created_at": "2026-10-14T05:03:25.773Z",
       "updated_at": "2026-10-14T05:03:25.773Z"
+    },
+    {
+      "id": "dae089b5-3618-4d01-8cee-8aa39d6c343f",
+      "reviewer_name": "Wang Qiaoli",
+      "presenter_names": "Xu Wenjie",
+      "project_title": "Cross-Modal Generation of Embroidery Patterns from Traditional Music and Dynamic 3D Visualization",
+      "contribution": "This project proposes an interpretable cross-modal framework that translates traditional musical structures into embroidery patterns, stitch paths, and dynamic 3D forms. Its main contribution is integrating music, pattern grammar, and fabrication constraints into one generative system.",
+      "strongest_support": "The strongest evidence is the comparison of outputs produced from different musical genres and motif categories under the same generative rules. A physical embroidery sample could further demonstrate that the generated stitch paths are continuous and practically manufacturable.",
+      "main_challenge": "The main challenge is proving that the mappings between musical features and embroidery parameters are meaningful rather than arbitrary. The project should clearly define how melody, rhythm, and musical structure control specific visual and stitch parameters, and validate these relationships through controlled experiments.",
+      "created_at": "2026-10-21T14:58:13.612Z",
+      "updated_at": "2026-10-21T14:58:13.612Z"
+    },
+    {
+      "id": "a07c66b7-6496-4737-a980-2b48c29b3d52",
+      "reviewer_name": "Wang Qiaoli",
+      "presenter_names": "zhai jiayu",
+      "project_title": "A Photograph of Coexisting Memories: Through Narrative-Driven Computational Imaging",
+      "contribution": "This project proposes a narrative-driven generative photography method that translates written recollections into traceable imaging parameters. By combining independent imaging states through spatial coexistence rules, it enables multiple, even contradictory, memories to remain visible within a single photograph.",
+      "strongest_support": "The strongest evidence is a controlled comparison in which the same source photograph is processed through three predefined recollections and multiple coexistence rules. Parameter records, process diagrams, and visual comparisons can demonstrate that the final variations result from explicit computational rules rather than arbitrary editing.",
+      "main_challenge": "The main challenge is demonstrating that the final image is more than a conventional collage or local photo-editing effect. The project should clarify how narrative features control specific imaging parameters and explain why particular memory branches coexist according to particular spatial rules.",
+      "created_at": "2026-10-21T15:03:44.538Z",
+      "updated_at": "2026-10-21T15:03:44.538Z"
+    },
+    {
+      "id": "dc2e1143-44ab-4583-81b4-039c7707cd97",
+      "reviewer_name": "Wang Qiaoli",
+      "presenter_names": "Wang Jingyu",
+      "project_title": "Generative Typography from Cantonese Street Names",
+      "contribution": "This project proposes a generative typography method that translates the temporal features of Cantonese pronunciation into dynamic visual structures for Chinese characters and Roman letters. Its contribution lies in connecting phonetic structure, typographic generation, and the legibility requirements of public signage within one design framework.",
+      "strongest_support": "The strongest evidence is a comparative set of outputs showing how the same phonetic rules control the structure, spacing, and movement of different Macau street names. Applying these rules consistently across Chinese and Roman writing systems, supported by parameter records and visual comparisons, would demonstrate the method’s traceability and transferability.",
+      "main_challenge": "The main challenge is establishing a meaningful and measurable relationship between Cantonese speech features and typographic parameters without unnecessarily reducing legibility. The project should define which phonetic features control which visual variables, identify the character structures that must remain unchanged, and verify the rules through controlled algorithmic comparisons.",
+      "created_at": "2026-10-21T15:07:53.284Z",
+      "updated_at": "2026-10-21T15:07:53.284Z"
+    },
+    {
+      "id": "70e7f949-87e9-40a3-8d04-bfa79c8afacf",
+      "reviewer_name": "Wang Qiaoli",
+      "presenter_names": "Jinshan",
+      "project_title": "Sonifying Bodily Movement for Embodied Reflection",
+      "contribution": "This project proposes a non-evaluative movement-sonification framework that transforms upper-body motion into replayable sonic traces for embodied reflection and creative expression. Its contribution is to shift movement sonification away from classification, correction, and numerical scoring toward preserving rhythm, continuity, spatial relationships, and felt qualities.",
+      "strongest_support": "The strongest evidence is a functioning interactive system that captures position, velocity, pauses, and left–right relationships and maps them into replayable sound. Comparative mapping experiments, replay records, and documented design iterations can demonstrate which movement qualities are preserved, transformed, or lost.",
+      "main_challenge": "The main challenge is ensuring that movement-to-sound mappings are understandable and experientially meaningful rather than arbitrary. The project should explain every mapping choice and demonstrate how replay enables reflection, while avoiding unsupported claims about therapeutic effects or improved bodily awareness.",
+      "created_at": "2026-10-21T15:09:49.103Z",
+      "updated_at": "2026-10-21T15:09:49.103Z"
+    },
+    {
+      "id": "45a344d3-2f31-4f43-8733-6053a3c10d88",
+      "reviewer_name": "Wang Qiaoli",
+      "presenter_names": "Jiang Yuhan",
+      "project_title": "From Unexpected Forms to Design Possibilities: Abductive Reasoning and Meaning Reconstruction in AI-Assisted Abstract 3D Form Ideation",
+      "contribution": "This project proposes the intermediate concept of “deviation as signification” and develops a process model explaining how unexpected AI-generated forms become design resources through noticing, abductive reasoning, and meaning reconstruction. It also offers a preliminary typology of possible outcomes: new metaphors, new functions, new formal languages, or rejection.",
+      "strongest_support": "The strongest evidence is a traceable first-person research record that documents the original intention, AI-generated deviation, immediate reaction, abductive guess, subsequent design decision, and discarded cases. Comparing multiple deviations through the same analytical loop can reveal recurring mechanisms rather than relying only on successful final objects.",
+      "main_challenge": "The main challenge is capturing fleeting subjective reactions without retrospectively overinterpreting them. The project should establish clear criteria for distinguishing a simple technical error from a meaningful design deviation and identify the precise point at which reinterpretation begins to influence the next design action.",
+      "created_at": "2026-10-21T15:12:18.113Z",
+      "updated_at": "2026-10-21T15:12:18.113Z"
+    },
+    {
+      "id": "b43b1ce1-9083-4c07-bcd2-c1f6d24be018",
+      "reviewer_name": "Wang Qiaoli",
+      "presenter_names": "Zhao Jingtong",
+      "project_title": "When Two Signs Become One: Line-Width Thresholds in Cube-Edge Symbols",
+      "contribution": "This project transforms the twelve edges of a cube into a constrained sign system and investigates the line-width threshold at which two structurally different signs become visually indistinguishable. Its contribution is to treat fabrication limits not merely as technical restrictions, but as conditions that determine whether a set of signs can continue to function as a distinguishable visual language.",
+      "strongest_support": "The strongest evidence is the complete sequence of six physical prints, in which the selected cube edges remain unchanged and only line width increases systematically. Read as an annotated portfolio, the series can visibly identify the interval where separate edges merge and the two signs cease to remain distinct.",
+      "main_challenge": "The main challenge is defining a measurable criterion for when two signs have “become the same,” rather than relying only on personal visual judgement. Scale, printing device, material, resolution, and viewing distance should remain controlled so that the observed threshold can be attributed specifically to line width and fabrication conditions.",
+      "created_at": "2026-10-21T15:18:56.869Z",
+      "updated_at": "2026-10-21T15:18:56.869Z"
+    },
+    {
+      "id": "eb65bca8-f22d-48d5-b71c-bff674d8b7ac",
+      "reviewer_name": "Wang Qiaoli",
+      "presenter_names": "Qu Jiafeng",
+      "project_title": "The Pond: Specimens of the Gaze",
+      "contribution": "This project introduces the concepts of the “predatory gaze” and “peripheral coexistence,” reframing visual clarity as a form of taxidermy that turns living ambiguity into a fixed specimen. Its design contribution combines three gaze-driven states with cumulative gaze memory, making every act of possessive looking leave a lasting trace within the system.",
+      "strongest_support": "The strongest evidence would be a functioning installation in which gaze direction, viewing distance, and duration visibly control calcification, collapse, and thawing in real time. System logs, an eight-hour time-lapse of accumulated shells, and short visitor interviews could demonstrate when viewers recognise that their own gaze is altering the habitat and whether they choose to step back.",
+      "main_challenge": "The main challenge is ensuring that viewers understand the causal relationship between their gaze and the form’s “death,” rather than experiencing the transformation as an arbitrary visual effect. The gaze-duration threshold and peripheral-vision logic must therefore be carefully calibrated to avoid accidental activation, while the research should clearly state that it examines habits of possessive looking rather than actual biological life.",
+      "created_at": "2026-10-21T15:22:00.776Z",
+      "updated_at": "2026-10-21T15:22:00.776Z"
     }
   ]
 }
