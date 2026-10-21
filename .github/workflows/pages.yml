@@ -40,10 +40,16 @@ jobs:
           rsync -a --exclude vendor --exclude '*.bat' --exclude '*.ps1' --exclude serve.py \
             my_work/tools/bioluminescent_tide/ site/
           rsync -a my_work/tools/hybrid/dist/ site/explorer/
+          mkdir -p site/idea-defence
+          cp projects/08_idea_defence/review.html \
+            projects/08_idea_defence/review-app.js \
+            projects/08_idea_defence/review-core.js \
+            site/idea-defence/
           cp index.html site/redirect-from-repo-root.html
           printf '%s\n' '/*    /index.html   200' > site/_redirects
           touch site/.nojekyll
           touch site/explorer/.nojekyll
+          touch site/idea-defence/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
