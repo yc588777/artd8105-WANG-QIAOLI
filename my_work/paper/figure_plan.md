@@ -25,3 +25,14 @@ pairs_with: "outline.md"
 展览板：`prints/haitang_a3_exhibition_board.jpg`（从 homework/week11 复制并缩小）。
 
 评估数字：`paper/eval/e1_e2_summary.json`、`e1_e2_runs.csv`（海棠实验室 eval/v4 副本）。这是脚本输出，不是切片或用户实验。
+
+## Draft v1 用图（2026-11-24，从 `论文初稿.docx` 抽出，未改图意）
+
+初稿自己的图 1–4，与上表大纲 Figure 1–10 **不是同一套编号**。
+
+| 初稿 | 文件 | 文中作用 |
+|---|---|---|
+| 图 1 | `paper/figures/draft_v1/image1.jpeg` | 预期效果 / 打印源 STL 正投影 / 两件白色样件 |
+| 图 2 | `paper/figures/draft_v1/image2.png` | 案例 D：正视、沿篾剖面、入框 |
+| 图 3 | `paper/figures/draft_v1/image3.png` | 34 号篾跨表追踪 |
+| 图 4 | `paper/figures/draft_v1/image4.png` | 四组工艺图正视（001828 / 002043 / 002103 / 002144） |
