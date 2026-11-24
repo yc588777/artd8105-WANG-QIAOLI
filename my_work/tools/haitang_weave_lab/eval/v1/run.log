@@ -1,0 +1,347 @@
+radial-star                  #29 trim   free= 72 short=  0 comp= 1 export=False 2.5s
+radial-star                  #30 anchor free=  0 short=  0 comp= 1 export=True  10.4s
+radial-star                  #30 trim   free= 69 short=  1 comp= 1 export=False 8.1s
+radial-star                  #31 anchor free=  0 short=  0 comp= 1 export=True  5.8s
+radial-star                  #31 trim   free= 68 short=  2 comp= 1 export=False 5.0s
+radial-star                  #32 anchor free=  0 short=  0 comp= 1 export=True  8.2s
+radial-star                  #32 trim   free= 48 short=  1 comp= 1 export=False 6.8s
+radial-star                  #33 anchor free=  0 short=  0 comp= 1 export=True  10.4s
+radial-star                  #33 trim   free= 27 short=  2 comp= 1 export=False 8.8s
+radial-star                  #34 anchor free=  0 short=  0 comp= 1 export=True  12.1s
+radial-star                  #34 trim   free= 31 short=  2 comp= 1 export=False 10.3s
+radial-star                  #35 anchor free=  0 short=  0 comp= 1 export=True  8.9s
+radial-star                  #35 trim   free= 93 short=  1 comp= 3 export=False 7.9s
+radial-star                  #36 anchor free=  0 short=  0 comp= 1 export=True  5.7s
+radial-star                  #36 trim   free= 66 short=  0 comp= 1 export=False 4.4s
+radial-star                  #37 anchor free=  0 short=  0 comp= 1 export=True  8.3s
+radial-star                  #37 trim   free= 89 short=  0 comp= 1 export=False 6.5s
+radial-star                  #38 anchor free=  0 short=  0 comp= 1 export=True  5.4s
+radial-star                  #38 trim   free= 59 short=  1 comp= 1 export=False 4.4s
+radial-star                  #39 anchor free=  0 short=  0 comp= 2 export=False 12.0s
+radial-star                  #39 trim   free= 61 short=  1 comp= 1 export=False 10.1s
+radial-star                  #40 anchor free=  0 short=  0 comp= 1 export=True  11.3s
+radial-star                  #40 trim   free= 64 short=  1 comp= 1 export=False 9.1s
+radial-star                  #41 anchor free=  0 short=  0 comp= 1 export=True  10.5s
+radial-star                  #41 trim   free= 21 short=  1 comp= 1 export=False 7.9s
+radial-star                  #42 anchor free=  0 short=  0 comp= 1 export=True  5.1s
+radial-star                  #42 trim   free= 62 short=  0 comp= 1 export=False 4.3s
+radial-star                  #43 anchor free=  0 short=  0 comp= 1 export=True  5.2s
+radial-star                  #43 trim   free= 60 short=  0 comp= 1 export=False 4.3s
+radial-star                  #44 anchor free=  0 short=  0 comp= 1 export=True  9.9s
+radial-star                  #44 trim   free= 21 short=  1 comp= 1 export=False 8.6s
+radial-star                  #45 anchor free=  0 short=  0 comp= 1 export=True  5.7s
+radial-star                  #45 trim   free= 62 short=  0 comp= 1 export=False 4.6s
+radial-star                  #46 anchor free=  0 short=  0 comp= 1 export=True  7.2s
+radial-star                  #46 trim   free= 80 short=  1 comp= 1 export=False 6.1s
+radial-star                  #47 anchor free=  0 short=  0 comp= 1 export=True  5.4s
+radial-star                  #47 trim   free= 56 short=  0 comp= 1 export=False 4.8s
+radial-star                  #48 anchor free=  0 short=  0 comp= 1 export=True  4.5s
+radial-star                  #48 trim   free= 44 short=  0 comp= 1 export=False 3.7s
+radial-star                  #49 anchor free=  0 short=  0 comp= 1 export=True  4.7s
+radial-star                  #49 trim   free= 46 short=  0 comp= 1 export=False 4.0s
+ripple-wave                  #00 anchor free=  0 short=  0 comp= 1 export=True  4.9s
+ripple-wave                  #00 trim   free= 60 short=  1 comp= 1 export=False 3.8s
+ripple-wave                  #01 anchor free=  0 short=  0 comp= 1 export=True  4.9s
+ripple-wave                  #01 trim   free= 62 short=  0 comp= 1 export=False 4.1s
+ripple-wave                  #02 anchor free=  0 short=  0 comp= 1 export=True  4.8s
+ripple-wave                  #02 trim   free= 56 short=  1 comp= 1 export=False 4.3s
+ripple-wave                  #03 anchor free=  0 short=  0 comp= 1 export=True  6.0s
+ripple-wave                  #03 trim   free= 70 short=  1 comp= 1 export=False 4.7s
+ripple-wave                  #04 anchor free=  0 short=  0 comp= 1 export=True  8.9s
+ripple-wave                  #04 trim   free= 98 short=  3 comp= 4 export=False 5.7s
+ripple-wave                  #05 anchor free=  0 short=  0 comp= 1 export=True  9.8s
+ripple-wave                  #05 trim   free= 46 short=  2 comp= 3 export=False 7.0s
+ripple-wave                  #06 anchor free=  0 short=  0 comp= 1 export=True  3.7s
+ripple-wave                  #06 trim   free= 36 short=  0 comp= 1 export=False 3.1s
+ripple-wave                  #07 anchor free=  0 short=  0 comp= 1 export=True  6.6s
+ripple-wave                  #07 trim   free= 84 short=  1 comp= 1 export=False 5.4s
+ripple-wave                  #08 anchor free=  0 short=  0 comp= 1 export=True  3.6s
+ripple-wave                  #08 trim   free= 36 short=  1 comp= 1 export=False 3.0s
+ripple-wave                  #09 anchor free=  0 short=  0 comp= 1 export=True  6.0s
+ripple-wave                  #09 trim   free= 66 short=  1 comp= 1 export=False 4.2s
+ripple-wave                  #10 anchor free=  0 short=  0 comp= 1 export=True  6.5s
+ripple-wave                  #10 trim   free= 76 short=  1 comp= 1 export=False 4.3s
+ripple-wave                  #11 anchor free=  0 short=  0 comp= 1 export=True  5.5s
+ripple-wave                  #11 trim   free= 60 short=  1 comp= 1 export=False 3.7s
+ripple-wave                  #12 anchor free=  0 short=  0 comp= 1 export=True  4.6s
+ripple-wave                  #12 trim   free= 51 short=  1 comp= 1 export=False 3.3s
+ripple-wave                  #13 anchor free=  0 short=  0 comp= 1 export=True  4.5s
+ripple-wave                  #13 trim   free= 48 short=  2 comp= 1 export=False 3.3s
+ripple-wave                  #14 anchor free=  0 short=  0 comp= 1 export=True  5.6s
+ripple-wave                  #14 trim   free= 66 short=  1 comp= 1 export=False 4.0s
+ripple-wave                  #15 anchor free=  0 short=  0 comp= 1 export=True  4.3s
+ripple-wave                  #15 trim   free= 46 short=  1 comp= 1 export=False 3.3s
+ripple-wave                  #16 anchor free=  0 short=  0 comp= 1 export=True  6.2s
+ripple-wave                  #16 trim   free= 71 short=  1 comp= 1 export=False 3.7s
+ripple-wave                  #17 anchor free=  0 short=  0 comp= 1 export=True  6.4s
+ripple-wave                  #17 trim   free= 74 short=  1 comp= 1 export=False 4.8s
+ripple-wave                  #18 anchor free=  0 short=  0 comp= 1 export=True  6.6s
+ripple-wave                  #18 trim   free= 84 short=  0 comp= 1 export=False 5.4s
+ripple-wave                  #19 anchor free=  0 short=  0 comp= 1 export=True  5.4s
+ripple-wave                  #19 trim   free= 54 short=  1 comp= 1 export=False 3.6s
+ripple-wave                  #20 anchor free=  0 short=  0 comp= 1 export=True  4.4s
+ripple-wave                  #20 trim   free= 50 short=  1 comp= 1 export=False 2.9s
+ripple-wave                  #21 anchor free=  0 short=  0 comp= 1 export=True  5.2s
+ripple-wave                  #21 trim   free= 56 short=  1 comp= 1 export=False 3.5s
+ripple-wave                  #22 anchor free=  0 short=  0 comp= 1 export=True  4.8s
+ripple-wave                  #22 trim   free= 58 short=  0 comp= 1 export=False 3.6s
+ripple-wave                  #23 anchor free=  0 short=  0 comp= 1 export=True  4.1s
+ripple-wave                  #23 trim   free= 44 short=  1 comp= 1 export=False 3.2s
+ripple-wave                  #24 anchor free=  0 short=  0 comp= 1 export=True  6.9s
+ripple-wave                  #24 trim   free= 96 short=  1 comp= 1 export=False 5.2s
+ripple-wave                  #25 anchor free=  0 short=  0 comp= 1 export=True  5.8s
+ripple-wave                  #25 trim   free= 58 short=  4 comp= 1 export=False 4.2s
+ripple-wave                  #26 anchor free=  0 short=  0 comp= 1 export=True  4.2s
+ripple-wave                  #26 trim   free= 50 short=  1 comp= 1 export=False 3.3s
+ripple-wave                  #27 anchor free=  0 short=  0 comp= 1 export=True  6.4s
+ripple-wave                  #27 trim   free= 84 short=  2 comp= 1 export=False 5.0s
+ripple-wave                  #28 anchor free=  0 short=  0 comp= 1 export=True  7.3s
+ripple-wave                  #28 trim   free= 92 short=  0 comp= 1 export=False 5.2s
+ripple-wave                  #29 anchor free=  0 short=  0 comp= 1 export=True  6.6s
+ripple-wave                  #29 trim   free= 84 short=  1 comp= 1 export=False 5.0s
+ripple-wave                  #30 anchor free=  0 short=  0 comp= 1 export=True  8.2s
+ripple-wave                  #30 trim   free=102 short=  2 comp= 3 export=False 5.1s
+ripple-wave                  #31 anchor free=  0 short=  0 comp= 1 export=True  4.9s
+ripple-wave                  #31 trim   free= 52 short=  1 comp= 1 export=False 4.1s
+ripple-wave                  #32 anchor free=  0 short=  0 comp= 1 export=True  6.3s
+ripple-wave                  #32 trim   free= 58 short=  2 comp= 1 export=False 4.6s
+ripple-wave                  #33 anchor free=  0 short=  0 comp= 1 export=True  3.0s
+ripple-wave                  #33 trim   free= 62 short=  1 comp= 1 export=False 2.0s
+ripple-wave                  #34 anchor free=  0 short=  0 comp= 1 export=True  2.1s
+ripple-wave                  #34 trim   free= 37 short=  0 comp= 1 export=False 1.6s
+ripple-wave                  #35 anchor free=  0 short=  0 comp= 1 export=True  2.1s
+ripple-wave                  #35 trim   free= 50 short=  2 comp= 1 export=False 1.8s
+ripple-wave                  #36 anchor free=  0 short=  0 comp= 1 export=True  1.8s
+ripple-wave                  #36 trim   free= 36 short=  0 comp= 1 export=False 1.5s
+ripple-wave                  #37 anchor free=  0 short=  0 comp= 1 export=True  3.2s
+ripple-wave                  #37 trim   free= 84 short=  2 comp= 1 export=False 2.4s
+ripple-wave                  #38 anchor free=  0 short=  0 comp= 1 export=True  3.1s
+ripple-wave                  #38 trim   free= 80 short=  1 comp= 1 export=False 2.3s
+ripple-wave                  #39 anchor free=  0 short=  0 comp= 1 export=True  2.5s
+ripple-wave                  #39 trim   free= 62 short=  1 comp= 1 export=False 1.9s
+ripple-wave                  #40 anchor free=  0 short=  0 comp= 1 export=True  2.7s
+ripple-wave                  #40 trim   free= 58 short=  4 comp= 1 export=False 2.0s
+ripple-wave                  #41 anchor free=  0 short=  0 comp= 1 export=True  2.4s
+ripple-wave                  #41 trim   free= 56 short=  2 comp= 1 export=False 1.9s
+ripple-wave                  #42 anchor free=  0 short=  0 comp= 1 export=True  3.1s
+ripple-wave                  #42 trim   free= 88 short=  1 comp= 2 export=False 2.3s
+ripple-wave                  #43 anchor free=  0 short=  0 comp= 1 export=True  3.9s
+ripple-wave                  #43 trim   free=100 short=  3 comp= 1 export=False 2.7s
+ripple-wave                  #44 anchor free=  0 short=  0 comp= 1 export=True  6.9s
+ripple-wave                  #44 trim   free= 71 short=  3 comp= 1 export=False 5.9s
+ripple-wave                  #45 anchor free=  0 short=  0 comp= 1 export=True  5.4s
+ripple-wave                  #45 trim   free= 68 short=  1 comp= 1 export=False 4.2s
+ripple-wave                  #46 anchor free=  0 short=  0 comp= 1 export=True  5.1s
+ripple-wave                  #46 trim   free= 60 short=  0 comp= 1 export=False 3.8s
+ripple-wave                  #47 anchor free=  0 short=  0 comp= 1 export=True  7.3s
+ripple-wave                  #47 trim   free= 79 short=  4 comp= 1 export=False 4.9s
+ripple-wave                  #48 anchor free=  0 short=  0 comp= 1 export=True  5.0s
+ripple-wave                  #48 trim   free= 50 short=  1 comp= 1 export=False 3.7s
+ripple-wave                  #49 anchor free=  0 short=  0 comp= 1 export=True  8.4s
+ripple-wave                  #49 trim   free= 99 short=  2 comp= 2 export=False 5.7s
+cellular-growth              #00 anchor free=  0 short=  0 comp= 3 export=False 8.6s
+cellular-growth              #00 trim   free= 46 short=  4 comp= 5 export=False 7.1s
+cellular-growth              #01 anchor free=  0 short=  0 comp= 4 export=False 8.9s
+cellular-growth              #01 trim   free= 49 short=  2 comp= 2 export=False 7.3s
+cellular-growth              #02 anchor free=  0 short=  0 comp= 2 export=False 9.4s
+cellular-growth              #02 trim   free= 30 short=  5 comp= 4 export=False 7.4s
+cellular-growth              #03 anchor free=  0 short=  0 comp= 1 export=True  2.8s
+cellular-growth              #03 trim   free= 14 short=  2 comp= 1 export=False 2.7s
+cellular-growth              #04 anchor free=  0 short=  0 comp= 1 export=True  6.2s
+cellular-growth              #04 trim   free= 40 short=  4 comp= 1 export=False 5.0s
+cellular-growth              #05 anchor free=  0 short=  0 comp= 4 export=False 7.4s
+cellular-growth              #05 trim   free= 30 short=  0 comp= 2 export=False 6.0s
+cellular-growth              #06 anchor free=  0 short=  0 comp= 1 export=True  3.2s
+cellular-growth              #06 trim   free= 28 short=  0 comp= 1 export=False 3.1s
+cellular-growth              #07 anchor free=  0 short=  0 comp= 1 export=True  4.4s
+cellular-growth              #07 trim   free= 35 short=  2 comp= 1 export=False 2.3s
+cellular-growth              #08 anchor free=  0 short=  0 comp= 1 export=True  8.0s
+cellular-growth              #08 trim   free= 34 short=  7 comp= 1 export=False 6.9s
+cellular-growth              #09 anchor free=  0 short=  0 comp= 1 export=True  6.2s
+cellular-growth              #09 trim   free= 31 short=  0 comp= 1 export=False 5.0s
+cellular-growth              #10 anchor free=  0 short=  0 comp= 2 export=False 6.2s
+cellular-growth              #10 trim   free= 47 short=  1 comp= 1 export=False 4.9s
+cellular-growth              #11 anchor free=  0 short=  0 comp= 3 export=False 9.4s
+cellular-growth              #11 trim   free= 23 short=  1 comp= 5 export=False 7.7s
+cellular-growth              #12 anchor free=  0 short=  0 comp= 2 export=False 9.2s
+cellular-growth              #12 trim   free= 27 short=  2 comp= 1 export=False 6.9s
+cellular-growth              #13 anchor free=  0 short=  0 comp= 1 export=True  7.2s
+cellular-growth              #13 trim   free= 29 short=  1 comp= 2 export=False 5.4s
+cellular-growth              #14 anchor free=  0 short=  0 comp= 1 export=True  5.7s
+cellular-growth              #14 trim   free= 39 short=  2 comp= 1 export=False 4.6s
+cellular-growth              #15 anchor free=  0 short=  0 comp= 1 export=True  9.3s
+cellular-growth              #15 trim   free= 31 short=  3 comp= 1 export=False 6.9s
+cellular-growth              #16 anchor free=  0 short=  0 comp= 2 export=False 9.0s
+cellular-growth              #16 trim   free= 22 short=  2 comp= 3 export=False 7.0s
+cellular-growth              #17 anchor free=  0 short=  0 comp= 2 export=False 8.8s
+cellular-growth              #17 trim   free= 36 short=  7 comp= 1 export=False 7.0s
+cellular-growth              #18 anchor free=  0 short=  0 comp= 5 export=False 9.7s
+cellular-growth              #18 trim   free= 35 short=  3 comp= 1 export=False 7.1s
+cellular-growth              #19 anchor free=  0 short=  0 comp= 1 export=True  4.6s
+cellular-growth              #19 trim   free= 33 short=  1 comp= 1 export=False 4.0s
+cellular-growth              #20 anchor free=  0 short=  0 comp= 3 export=False 9.6s
+cellular-growth              #20 trim   free= 34 short=  2 comp= 1 export=False 6.9s
+cellular-growth              #21 anchor free=  0 short=  0 comp= 1 export=True  6.6s
+cellular-growth              #21 trim   free= 42 short=  3 comp= 2 export=False 5.5s
+cellular-growth              #22 anchor free=  0 short=  0 comp= 2 export=False 8.3s
+cellular-growth              #22 trim   free= 27 short=  1 comp= 2 export=False 6.0s
+cellular-growth              #23 anchor free=  0 short=  0 comp= 1 export=True  6.6s
+cellular-growth              #23 trim   free= 22 short=  2 comp= 1 export=False 5.1s
+cellular-growth              #24 anchor free=  0 short=  0 comp= 7 export=False 9.6s
+cellular-growth              #24 trim   free= 30 short=  3 comp= 8 export=False 8.2s
+cellular-growth              #25 anchor free=  0 short=  0 comp= 5 export=False 10.0s
+cellular-growth              #25 trim   free= 21 short=  3 comp= 1 export=False 7.1s
+cellular-growth              #26 anchor free=  0 short=  0 comp= 1 export=True  6.1s
+cellular-growth              #26 trim   free= 21 short=  5 comp= 1 export=False 5.2s
+cellular-growth              #27 anchor free=  0 short=  0 comp= 1 export=True  3.8s
+cellular-growth              #27 trim   free= 38 short=  0 comp= 2 export=False 3.6s
+cellular-growth              #28 anchor free=  0 short=  0 comp= 1 export=True  8.5s
+cellular-growth              #28 trim   free= 42 short=  4 comp= 1 export=False 6.4s
+cellular-growth              #29 anchor free=  0 short=  0 comp= 1 export=True  5.8s
+cellular-growth              #29 trim   free= 40 short=  4 comp= 1 export=False 5.0s
+cellular-growth              #30 anchor free=  0 short=  0 comp= 1 export=True  7.6s
+cellular-growth              #30 trim   free= 41 short=  3 comp= 3 export=False 6.0s
+cellular-growth              #31 anchor free=  0 short=  0 comp= 1 export=True  9.5s
+cellular-growth              #31 trim   free= 24 short=  1 comp= 1 export=False 6.8s
+cellular-growth              #32 anchor free=  0 short=  0 comp= 2 export=False 9.5s
+cellular-growth              #32 trim   free= 25 short=  5 comp= 2 export=False 7.0s
+cellular-growth              #33 anchor free=  0 short=  0 comp= 2 export=False 9.6s
+cellular-growth              #33 trim   free= 48 short=  4 comp= 1 export=False 7.8s
+cellular-growth              #34 anchor free=  0 short=  0 comp= 1 export=True  5.7s
+cellular-growth              #34 trim   free= 44 short=  1 comp= 1 export=False 4.6s
+cellular-growth              #35 anchor free=  0 short=  0 comp= 1 export=True  3.5s
+cellular-growth              #35 trim   free= 22 short=  0 comp= 1 export=False 3.3s
+cellular-growth              #36 anchor free=  0 short=  0 comp= 5 export=False 9.8s
+cellular-growth              #36 trim   free= 31 short=  5 comp= 2 export=False 7.8s
+cellular-growth              #37 anchor free=  0 short=  0 comp= 3 export=False 10.1s
+cellular-growth              #37 trim   free= 48 short=  2 comp= 3 export=False 6.7s
+cellular-growth              #38 anchor free=  0 short=  0 comp= 1 export=True  6.3s
+cellular-growth              #38 trim   free= 28 short=  4 comp= 1 export=False 5.0s
+cellular-growth              #39 anchor free=  0 short=  0 comp= 2 export=False 4.7s
+cellular-growth              #39 trim   free= 30 short=  2 comp= 1 export=False 3.7s
+cellular-growth              #40 anchor free=  0 short=  0 comp= 1 export=True  5.9s
+cellular-growth              #40 trim   free= 26 short=  0 comp= 1 export=False 5.2s
+cellular-growth              #41 anchor free=  0 short=  0 comp= 1 export=True  5.5s
+cellular-growth              #41 trim   free= 34 short=  2 comp= 1 export=False 4.7s
+cellular-growth              #42 anchor free=  0 short=  0 comp= 1 export=True  5.7s
+cellular-growth              #42 trim   free= 27 short=  2 comp= 1 export=False 4.7s
+cellular-growth              #43 anchor free=  0 short=  0 comp= 1 export=True  5.0s
+cellular-growth              #43 trim   free= 38 short=  0 comp= 1 export=False 4.5s
+cellular-growth              #44 anchor free=  0 short=  0 comp= 4 export=False 11.2s
+cellular-growth              #44 trim   free= 47 short=  3 comp= 1 export=False 8.5s
+cellular-growth              #45 anchor free=  0 short=  0 comp= 1 export=True  9.4s
+cellular-growth              #45 trim   free= 40 short=  5 comp= 1 export=False 6.4s
+cellular-growth              #46 anchor free=  0 short=  0 comp= 3 export=False 9.8s
+cellular-growth              #46 trim   free= 45 short=  4 comp= 6 export=False 8.4s
+cellular-growth              #47 anchor free=  0 short=  0 comp= 1 export=True  8.6s
+cellular-growth              #47 trim   free= 49 short=  1 comp= 1 export=False 5.7s
+cellular-growth              #48 anchor free=  0 short=  0 comp= 5 export=False 10.7s
+cellular-growth              #48 trim   free= 30 short=  2 comp= 5 export=False 8.1s
+cellular-growth              #49 anchor free=  0 short=  0 comp= 1 export=True  4.8s
+cellular-growth              #49 trim   free= 22 short=  2 comp= 1 export=False 3.9s
+{
+  "rotating-diamond-reference": {
+    "anchor": {
+      "n": 50,
+      "exportable_rate": 0.98,
+      "one_piece_rate": 0.98,
+      "free_ends_mean": 0.0,
+      "short_fragment_mean": 0.0,
+      "insufficient_embed_mean": 0.0,
+      "components_mean": 1.06,
+      "curve_mean": 34.7,
+      "seconds_mean": 3.39,
+      "seconds_max": 8.33
+    },
+    "trim": {
+      "n": 50,
+      "exportable_rate": 0.0,
+      "one_piece_rate": 0.92,
+      "free_ends_mean": 50.36,
+      "short_fragment_mean": 2.52,
+      "insufficient_embed_mean": 102.8,
+      "components_mean": 1.12,
+      "curve_mean": 51.4,
+      "seconds_mean": 2.68,
+      "seconds_max": 6.07
+    }
+  },
+  "radial-star": {
+    "anchor": {
+      "n": 50,
+      "exportable_rate": 0.92,
+      "one_piece_rate": 0.92,
+      "free_ends_mean": 0.0,
+      "short_fragment_mean": 0.0,
+      "insufficient_embed_mean": 0.0,
+      "components_mean": 1.08,
+      "curve_mean": 36.26,
+      "seconds_mean": 8.95,
+      "seconds_max": 18.72
+    },
+    "trim": {
+      "n": 50,
+      "exportable_rate": 0.0,
+      "one_piece_rate": 0.92,
+      "free_ends_mean": 60.74,
+      "short_fragment_mean": 0.7,
+      "insufficient_embed_mean": 100.92,
+      "components_mean": 1.2,
+      "curve_mean": 50.46,
+      "seconds_mean": 7.48,
+      "seconds_max": 15.8
+    }
+  },
+  "ripple-wave": {
+    "anchor": {
+      "n": 50,
+      "exportable_rate": 1.0,
+      "one_piece_rate": 1.0,
+      "free_ends_mean": 0.0,
+      "short_fragment_mean": 0.0,
+      "insufficient_embed_mean": 0.0,
+      "components_mean": 1.0,
+      "curve_mean": 28.36,
+      "seconds_mean": 5.16,
+      "seconds_max": 9.84
+    },
+    "trim": {
+      "n": 50,
+      "exportable_rate": 0.0,
+      "one_piece_rate": 0.9,
+      "free_ends_mean": 65.36,
+      "short_fragment_mean": 1.32,
+      "insufficient_embed_mean": 68.44,
+      "components_mean": 1.18,
+      "curve_mean": 34.22,
+      "seconds_mean": 3.8,
+      "seconds_max": 7.02
+    }
+  },
+  "cellular-growth": {
+    "anchor": {
+      "n": 50,
+      "exportable_rate": 0.56,
+      "one_piece_rate": 0.56,
+      "free_ends_mean": 0.0,
+      "short_fragment_mean": 0.0,
+      "insufficient_embed_mean": 0.0,
+      "components_mean": 2.0,
+      "curve_mean": 35.34,
+      "seconds_mean": 7.44,
+      "seconds_max": 11.22
+    },
+    "trim": {
+      "n": 50,
+      "exportable_rate": 0.0,
+      "one_piece_rate": 0.66,
+      "free_ends_mean": 33.5,
+      "short_fragment_mean": 2.48,
+      "insufficient_embed_mean": 92.64,
+      "components_mean": 1.82,
+      "curve_mean": 46.32,
+      "seconds_mean": 5.84,
+      "seconds_max": 8.53
+    }
+  }
+}

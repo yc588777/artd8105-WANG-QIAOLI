@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<title>海棠经纬 · 系统展板</title>
+<style>
+@page { size: 594mm 841mm; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 594mm; height: 841mm;
+  background: #fff; color: #1b1814;
+  overflow: hidden;
+}
+body {
+  font-family: "Microsoft YaHei", "Microsoft JhengHei", "PingFang SC", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.sheet {
+  width: 594mm; height: 841mm;
+  padding: 10mm 13mm 14mm;
+  display: grid;
+  grid-template-rows: auto 244mm 164mm minmax(0, 1fr);
+  gap: 5mm;
+  position: relative;
+}
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.kicker {
+  font-size: 3.1mm; letter-spacing: 0.22em; font-weight: 700;
+  color: #1b1814;
+}
+.en {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-weight: 500; letter-spacing: 0.01em;
+}
+
+/* mast */
+.mast {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 10mm;
+  align-items: end;
+  padding-bottom: 3.5mm;
+  border-bottom: 0.45mm solid #1b1814;
+}
+.lockup { display: grid; grid-template-columns: 52mm 1fr; gap: 6mm; align-items: end; margin-top: 5mm; }
+.strips { height: 78mm; display: flex; flex-direction: column; gap: 1.3mm; }
+.strips i { display: block; flex: 1; }
+.strips i:nth-child(1) { background: #ecd9bf; flex: 1.15; }
+.strips i:nth-child(2) { background: #b5533a; flex: 0.7; }
+.strips i:nth-child(3) { background: #2c241e; flex: 1.35; }
+.strips i:nth-child(4) { background: #c9844a; flex: 0.85; }
+.strips i:nth-child(5) { background: #f4ecdf; flex: 1.05; }
+.strips i:nth-child(6) { background: #8d6848; flex: 0.95; }
+.strips i:nth-child(7) { background: #dcc19a; flex: 1.2; }
+h1 {
+  font-size: 36mm; line-height: 0.9; font-weight: 700;
+  letter-spacing: 0.08em;
+}
+h1 span { display: block; letter-spacing: 0.34em; padding-left: 0.5mm; }
+.ask { padding-bottom: 1mm; }
+.ask .q {
+  font-size: 4.2mm; letter-spacing: 0.08em; color: #6d655c; font-weight: 600;
+}
+.ask h2 {
+  margin-top: 2.5mm;
+  font-size: 15.5mm; line-height: 1.12; font-weight: 700; letter-spacing: 0.04em;
+}
+.ask .deck {
+  margin-top: 4mm;
+  font-size: 3.7mm; line-height: 1.55;
+}
+.ask .deck-en {
+  margin-top: 2.2mm;
+  font-size: 3.15mm; line-height: 1.4; color: #6d655c; max-width: 96mm;
+}
+
+/* shared */
+.sec {
+  font-size: 5.2mm; font-weight: 700; letter-spacing: 0.04em;
+}
+.sec b { font-weight: 700; margin-right: 2mm; letter-spacing: 0.02em; }
+.star {
+  margin-top: 3.2mm;
+  font-size: 3.15mm; letter-spacing: 0.16em; font-weight: 700; color: #6d655c;
+}
+.pair {
+  display: grid;
+  grid-template-columns: 1.22fr 0.78fr;
+  gap: 8mm;
+  min-height: 0;
+  align-items: stretch;
+}
+.col { min-width: 0; min-height: 0; height: 100%; display: flex; flex-direction: column; }
+.rule { border-left: 0.25mm solid #e4ddd2; padding-left: 6mm; }
+
+/* 01 */
+.concept { margin-top: 2.4mm; font-size: 3.7mm; line-height: 1.5; }
+.flow {
+  margin-top: 3.4mm;
+  display: grid;
+  grid-template-columns: 42mm minmax(0, 1fr) 42mm;
+  gap: 3.2mm;
+  align-items: center;
+}
+.who { text-align: center; }
+.who b { display: block; font-size: 4.4mm; letter-spacing: 0.08em; }
+.who span { display: block; margin-top: 0.8mm; font-size: 2.9mm; line-height: 1.35; color: #3c362f; }
+.bar { height: 8mm; display: flex; }
+.bar i { flex: 1; }
+.bar i:nth-child(1) { background: #dcc19a; }
+.bar i:nth-child(2) { background: #c9844a; }
+.bar i:nth-child(3) { background: #b5533a; }
+.bar i:nth-child(4) { background: #8d6848; }
+.bar i:nth-child(5) { background: #2c241e; }
+.flow-cap { margin-top: 1.4mm; font-size: 2.8mm; letter-spacing: 0.12em; color: #6d655c; text-align: center; }
+.shots {
+  margin-top: 3.5mm;
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 3mm;
+  position: relative;
+}
+.shots figure { min-height: 0; position: relative; background: #f3f0ea; overflow: hidden; }
+.shots figcaption {
+  position: absolute; left: 2.2mm; bottom: 2mm;
+  background: rgba(255,255,255,0.92);
+  padding: 1mm 1.8mm 1.1mm;
+  font-size: 2.7mm; letter-spacing: 0.08em; font-weight: 700;
+}
+.seal {
+  position: absolute; left: 38%; top: 50%;
+  width: 32mm; height: 32mm; margin: -16mm 0 0 -16mm;
+  border-radius: 50%;
+  background: #b5533a; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  font-size: 4mm; line-height: 1.25; font-weight: 700; letter-spacing: 0.06em;
+  z-index: 2;
+}
+
+/* 02 */
+.grams {
+  margin-top: 2.2mm;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2mm 3mm;
+}
+.gram {
+  display: grid;
+  grid-template-columns: 16mm 1fr;
+  gap: 2.2mm;
+  align-items: center;
+  min-height: 0;
+}
+.gram svg { width: 16mm; height: 16mm; }
+.gram b { display: block; font-size: 3.7mm; letter-spacing: 0.06em; }
+.gram span { display: block; margin-top: 0.5mm; font-size: 2.85mm; line-height: 1.3; color: #3c362f; }
+.tones { margin-top: 2mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4mm; }
+.tone i { display: block; height: 11mm; }
+.tone b { display: block; margin-top: 1.5mm; font-size: 3.5mm; letter-spacing: 0.06em; }
+.tone-line { margin-top: 2mm; font-size: 2.9mm; color: #3c362f; letter-spacing: 0.04em; }
+.ends { margin-top: 2.4mm; display: flex; gap: 5mm; align-items: center; font-size: 3mm; }
+.dot {
+  display: inline-grid; place-items: center;
+  width: 6.2mm; height: 6.2mm; border-radius: 50%;
+  font-size: 2.7mm; font-weight: 700; margin-right: 1.4mm;
+  vertical-align: -1.6mm;
+}
+.dot.solid { background: #1b1814; color: #fff; }
+.dot.open { background: #fff; color: #1b1814; border: 0.45mm solid #1b1814; }
+.cross { margin-top: 2mm; display: grid; grid-template-columns: 58mm 1fr; gap: 3mm; align-items: center; }
+.sys { justify-content: space-between; }
+.cross svg { width: 72mm; height: 34mm; }
+.cross b { display: block; font-size: 3.5mm; }
+.cross span { display: block; margin-top: 0.8mm; font-size: 2.9mm; line-height: 1.4; color: #3c362f; }
+
+/* 03 */
+.see { min-height: 0; }
+.frames {
+  flex: 1; min-height: 0;
+  margin-top: 2.6mm;
+  display: grid;
+  grid-template-columns: 0.86fr 1fr 1fr;
+  gap: 3mm;
+}
+.frames figure { min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; background: #fff; }
+.frames .pic { min-height: 0; background: #f7f5f2; overflow: hidden; }
+.frames .pic.contain img { object-fit: contain; object-position: center; }
+.frames figcaption { padding-top: 1.6mm; }
+.frames figcaption b { display: block; font-size: 3.2mm; letter-spacing: 0.04em; }
+.frames figcaption span { display: block; margin-top: 0.4mm; font-size: 2.7mm; line-height: 1.35; color: #3c362f; }
+.pic.zoom img { transform: scale(1.9); transform-origin: 47% 40%; }
+.slogan {
+  display: flex; flex-direction: column; justify-content: center;
+}
+.slogan h2 {
+  font-size: 17mm; line-height: 1.12; font-weight: 700; letter-spacing: 0.06em;
+}
+.slogan .sub {
+  margin-top: 4mm; padding-top: 3mm;
+  border-top: 0.35mm solid #1b1814;
+  font-size: 3.5mm; line-height: 1.45;
+}
+.slogan .sub-en {
+  margin-top: 1.6mm; font-size: 3mm; line-height: 1.35; color: #6d655c;
+}
+
+/* 04 */
+.base { min-height: 0; }
+.hold {
+  min-height: 0; flex: 1;
+  position: relative; overflow: hidden; background: #f3e6e2;
+}
+.hold img { object-position: 50% 70%; }
+.hold figcaption {
+  position: absolute; left: 4mm; top: 4mm;
+  background: rgba(255,255,255,0.94);
+  padding: 3mm 3.6mm 3.2mm;
+  max-width: 62mm;
+}
+.hold figcaption b { display: block; font-size: 5mm; line-height: 1.25; letter-spacing: 0.04em; }
+.hold figcaption span { display: block; margin-top: 1.4mm; font-size: 3mm; line-height: 1.4; }
+.values {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+.vlist {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+}
+.v {
+  display: grid; grid-template-columns: 6mm 1fr; gap: 3.6mm;
+  align-items: center;
+  min-height: 16mm;
+}
+.v i { display: block; height: 16mm; }
+.v i.c1 { background: #dcc19a; }
+.v i.c2 { background: #8d6848; }
+.v i.c3 { background: #b5533a; }
+.v b { display: block; font-size: 4.8mm; letter-spacing: 0.08em; }
+.v span { display: block; margin-top: 0.8mm; font-size: 3.45mm; line-height: 1.45; color: #3c362f; }
+.close { margin-top: 4mm; padding-top: 3.5mm; border-top: 0.35mm solid #1b1814; }
+.close b { display: block; font-size: 8mm; line-height: 1.2; letter-spacing: 0.03em; }
+.close span { display: block; margin-top: 2.4mm; font-size: 3.05mm; line-height: 1.35; color: #6d655c; }
+.run {
+  position: absolute; left: 13mm; right: 13mm; bottom: 4.2mm;
+  display: flex; justify-content: space-between;
+  font-size: 2.6mm; letter-spacing: 0.16em; color: #8a8176; font-weight: 700;
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="mast">
+    <div>
+      <p class="kicker">海棠经纬 · 设计师与竹编手艺人</p>
+      <div class="lockup">
+        <div class="strips" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <h1>海棠<span>经纬</span></h1>
+      </div>
+    </div>
+    <div class="ask">
+      <p class="q en">What do both sides see?</p>
+      <h2>双方看见<br>同一把扇。</h2>
+      <p class="deck">海棠经纬让设计师与竹编手艺人面对同一份可执行方案。扇框锁定于母版，图案只在开口内生成。</p>
+      <p class="deck-en en">The frame is locked to the master, and the pattern is generated only inside the opening, so both see the same fan.</p>
+    </div>
+  </header>
+
+  <section class="pair">
+    <div class="col">
+      <p class="sec"><b>01.</b>同一方案</p>
+      <p class="star">* 概念</p>
+      <p class="concept">设计师调整疏密、方向与弧度。四种文法在开口内成编。手艺人看见的是同一把扇。</p>
+      <div class="flow">
+        <div class="who">
+          <b>设计师</b>
+          <span>疏密、方向与弧度</span>
+        </div>
+        <div>
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="flow-cap">开口内成编</p>
+        </div>
+        <div class="who">
+          <b>手艺人</b>
+          <span>备篾、入框、穿编</span>
+        </div>
+      </div>
+      <p class="star">* 看见</p>
+      <div class="shots">
+        <figure>
+          <img src="board/weave.jpg" alt="红、橙、本色与深色竹篾的挑压"/>
+          <figcaption>竹篾挑压</figcaption>
+        </figure>
+        <figure>
+          <img src="board/ui.jpg" alt="海棠经纬设计界面，旋转菱纹" style="object-position:8% 42%"/>
+          <figcaption>设计界面</figcaption>
+        </figure>
+        <div class="seal">同一份<br>方案</div>
+      </div>
+    </div>
+
+    <div class="col rule sys">
+      <div>
+      <p class="sec"><b>02.</b>四种文法</p>
+      <p class="star">* 成编</p>
+      <div class="grams">
+        <div class="gram">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="1" y="1" width="62" height="62" fill="#f7f4ee" stroke="#1b1814" stroke-width="1.5"/>
+            <line x1="6" y1="22" x2="58" y2="48" stroke="#8d6848" stroke-width="3.2"/>
+            <line x1="6" y1="34" x2="58" y2="60" stroke="#8d6848" stroke-width="3.2"/>
+            <line x1="6" y1="10" x2="46" y2="28" stroke="#8d6848" stroke-width="3.2"/>
+            <line x1="14" y1="6" x2="58" y2="40" stroke="#dcc19a" stroke-width="3.2"/>
+            <line x1="6" y1="18" x2="50" y2="52" stroke="#dcc19a" stroke-width="3.2"/>
+            <line x1="22" y1="6" x2="58" y2="28" stroke="#dcc19a" stroke-width="3.2"/>
+          </svg>
+          <div><b>旋转菱纹</b><span>两向斜篾，平纹相压</span></div>
+        </div>
+        <div class="gram">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="1" y="1" width="62" height="62" fill="#f7f4ee" stroke="#1b1814" stroke-width="1.5"/>
+            <circle cx="32" cy="32" r="8" fill="none" stroke="#b5533a" stroke-width="2.4"/>
+            <circle cx="32" cy="32" r="16" fill="none" stroke="#8d6848" stroke-width="2.4"/>
+            <circle cx="32" cy="32" r="24" fill="none" stroke="#dcc19a" stroke-width="2.6"/>
+            <path d="M32 8v48M8 32h48M15 15l34 34M49 15L15 49" stroke="#2c241e" stroke-width="1.4"/>
+          </svg>
+          <div><b>放射星纹</b><span>辐条与环篾，逐交交替</span></div>
+        </div>
+        <div class="gram">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="1" y="1" width="62" height="62" fill="#f7f4ee" stroke="#1b1814" stroke-width="1.5"/>
+            <path d="M6 24c8-10 14-10 22 0s14 10 22 0 8-8 8-8" fill="none" stroke="#8d6848" stroke-width="3"/>
+            <path d="M6 40c8 10 14 10 22 0s14-10 22 0 8 8 8 8" fill="none" stroke="#b5533a" stroke-width="3"/>
+            <path d="M6 32c8-6 14-6 22 0s14 6 22 0 8-4 8-4" fill="none" stroke="#dcc19a" stroke-width="2.4"/>
+          </svg>
+          <div><b>涟漪</b><span>经纬波线，相穿成纹</span></div>
+        </div>
+        <div class="gram">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="1" y="1" width="62" height="62" fill="#f7f4ee" stroke="#1b1814" stroke-width="1.5"/>
+            <path d="M32 10l16 9v18L32 46 16 37V19z" fill="none" stroke="#2c241e" stroke-width="1.6"/>
+            <path d="M16 28h32M22 16l20 28M42 16L22 44" fill="none" stroke="#b5533a" stroke-width="2.2"/>
+          </svg>
+          <div><b>细胞纹</b><span>三向篾，构成六角</span></div>
+        </div>
+      </div>
+      </div>
+
+      <div>
+      <p class="star">* 认层</p>
+      <div class="tones">
+        <div class="tone"><i style="background:#dcc19a"></i><b>本色篾</b></div>
+        <div class="tone"><i style="background:#8d6848"></i><b>碳化篾</b></div>
+        <div class="tone"><i style="background:#b5533a"></i><b>赭红篾</b></div>
+      </div>
+      <p class="tone-line">颜色区分层次。按色认层，按号认篾。</p>
+      <div class="ends">
+        <span><i class="dot solid">1</i>实心号为起点</span>
+        <span><i class="dot open">1</i>空心号为终点</span>
+      </div>
+      </div>
+
+      <div>
+      <p class="star">* 挑压</p>
+      <div class="cross">
+        <svg viewBox="0 0 160 78" aria-hidden="true">
+          <rect x="64" y="4" width="28" height="22" fill="#8d6848"/>
+          <rect x="64" y="52" width="28" height="22" fill="#8d6848"/>
+          <rect x="6" y="27" width="148" height="24" fill="#dcc19a"/>
+        </svg>
+        <div>
+          <b>沿每根篾，一上一下。</b>
+          <span>在上者连续通过。在下者于交点断开让位。</span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pair see">
+    <div class="col">
+      <p class="sec"><b>03.</b>看见同一把扇</p>
+      <div class="frames">
+        <figure>
+          <div class="pic contain"><img src="board/fan.jpg" alt="银框海棠扇，菱纹竹编"/></div>
+          <figcaption><b>扇面</b><span>扇框锁定于母版，图案只在开口内。</span></figcaption>
+        </figure>
+        <figure>
+          <div class="pic"><img src="board/weave.jpg" alt="竹篾交错的近景" style="object-position:30% 45%"/></div>
+          <figcaption><b>挑压</b><span>在上的连续，在下的于交点断开。</span></figcaption>
+        </figure>
+        <figure>
+          <div class="pic zoom"><img src="board/printbed.png" alt="打印板上的海棠扇"/></div>
+          <figcaption><b>打印</b><span>打印预览里的同一把扇。</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="col rule slogan">
+      <h2>按色认层，<br>按号认篾。</h2>
+      <p class="sub">平面、三维与工艺图<br>读同一套次序。</p>
+      <p class="sub-en en">Plan, model and craft sheet read one order. Colour names the layer, number names the strip.</p>
+    </div>
+  </section>
+
+  <section class="pair base">
+    <figure class="hold">
+      <img src="board/hold.jpg" alt="手里拿着一大一小两把打印样扇"/>
+      <figcaption>
+        <b>同一把扇，拿在手里。</b>
+        <span>按编号指出何处难弯、何处难穿。</span>
+      </figcaption>
+    </figure>
+    <div class="col rule values">
+      <p class="sec"><b>04.</b>可核对的次序</p>
+      <div class="vlist">
+        <div class="v"><i class="c1"></i><div><b>明细</b><span>写下料、宽厚与上下顺序。</span></div></div>
+        <div class="v"><i class="c2"></i><div><b>制作</b><span>手艺人据此备篾、入框、穿编。</span></div></div>
+        <div class="v"><i class="c3"></i><div><b>判断</b><span>判断写回编号。参数一改，画面与明细一起更新。</span></div></div>
+      </div>
+      <div class="close">
+        <b>口头约定，<br>变成次序。</b>
+        <span class="en">What was agreed in words becomes an order both sides can check.</span>
+      </div>
+    </div>
+  </section>
+  <p class="run"><span>HAITANG WEAVE LAB</span><span>海棠经纬 · 可执行方案</span></p>
+</main>
+</body>
+</html>
