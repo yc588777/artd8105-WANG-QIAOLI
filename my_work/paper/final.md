@@ -3,8 +3,9 @@ student: "汪俏黎 / WANG QIALI"
 date: 2026-11-24
 source: "copied from E:/UM/UM-3/ATTICUS/结课论文/HaiTang_Weave_Lab_Revised_EN-v3.docx; prose not rewritten"
 version: final-v3-en
-status: "S14 submission manuscript"
+status: "S14 final — student declared 2026-11-24"
 approx_words_excluding_references: 4264
+canonical_docx: "HaiTang_Weave_Lab_Revised_EN-v3.docx"
 ---
 
 # HaiTang Weave Lab: A Manufacturability-Constrained Parametric System for Dual-Path Fabrication and Photorealistic Preview of Bamboo-Woven Fans

@@ -14,3 +14,7 @@ kind: agent filing note — not student prose
 - 初稿贡献是「有向篾条身份 + 工艺图可复查」；`outline.md` v4 的 E1–E6 技术评估与 existence proof 未写入本篇，也未把未做的评估写成结果。
 - 参考文献未在本次打开 DOI 复核。S14 文献审计仍待做。
 - 署名行写作「汪俏黎，Atticus Sims（通讯作者）」。这是课业稿，是否署指导教师姓名由学生与教师确认；此处未改。
+
+## S14 终稿（学生 2026-11-24 19:46 确认）
+
+学生指定 `HaiTang_Weave_Lab_Revised_EN-v3.docx` / `final.md` 为提交终稿。不以另一份稿替换。`draft_v1.md` 只保留为初稿记录。
