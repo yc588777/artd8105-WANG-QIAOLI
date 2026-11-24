@@ -1,40 +1,38 @@
 # Log self-assessment
 
 Student ID: Y-C5-8877-7  
-Log location(s): **没有。** 仓库中不存在 `my_work/_research_log/`，根目录也不存在 `_research_log/`。没有 session `.jsonl`、没有 `decisions/DEC-*.md`、没有 weekly summary、没有 `INTEGRITY.md`。  
-Period covered: 无规范日志覆盖。课程工作大约 2026-08-19 至 2026-11-24。  
-Total logged sessions: **0**  
-Total decision records: **0**（按课程 `_research_log/decisions/` 计数）
+Log location(s): `my_work/_research_log/`（2026-11-24 首次建立）  
+Period covered: 规范 log 只覆盖 **2026-11-24 这一条聊天** 里能看见的交作业动作。课程工作大约 2026-08-19 至 2026-11-24。  
+Total logged sessions: **1**（全部 `reconstructed: true`）  
+Total decision records: **1**（`DEC-001`，补记）
 
 ## Coverage
 
-规范 research log **没有覆盖任何阶段**。
+规范 research log **几乎没有覆盖学期**。现有 1 个 session 文件是终期当天从当前聊天补录的，不是从 8 月起当场记的。
 
-过程痕迹在别的地方，不能算作 session log：
+过程痕迹仍在别处：
 
-- `my_work/process_journal/`：3 篇（2026-08-25 指令工作坊；2026-08-28 手绘圆；2026-10-13 海棠转向）
-- GitHub 提交历史（指令、生成器、3D、互评、大纲、展签、阅读笔记）
-- 海棠系统在另一 Cursor 工程 `MorphogeneticSegmentedVase/haitang-weave-lab`，未写入本仓库的 log
+- `my_work/process_journal/`：6 篇。原 3 篇（8-25、8-28、10-13）加 2026-11-24 事后三篇（两家打印、B15、为终稿改系统）
+- GitHub 提交历史
+- 海棠系统在另一 Cursor 工程，未写入本 log
 
-**缺的时段：** Session 1 至终期。从未按 `context/provenance_logging_spec.md` 开过 logging session。Session 8 Notion 要求补录旧聊天；当时指出缺口后，没有在各条旧聊天里执行补录，也没有事后伪造条目。
+**缺的时段：** Session 1 至 11 月 23 日。其他课程聊天没有按 `catch_up_research_logs.md` 逐条打开补录。
 
 ## Decisions recorded
 
-规范 log **没有记录任何选择、修改或拒绝。** 下面两例发生在仓库别的文件里，**不是** DEC 记录。
+1. **DEC-001（2026-11-24，补记）。** 初稿用展览 web 版；终稿前迭代系统、加效果图版块、修工艺图多语言。见 `my_work/_research_log/decisions/DEC-001.md` 与过程日记 `2026-11-24_system-iteration-for-paper.md`。
+2. **项目转向**仍在 `topic.md`（2026-10-13），**不是** DEC 文件。
 
-1. **项目转向（接受）。** Session 4 `topic.md` 声明夜光虫 / HYBRID.06；2026-10-13 同文件增补：终期改为海棠经纬。见 `my_work/topic.md`「2026-10-13 · 项目已转向」。
-2. **贡献类型改口（接受，未写进 idea evaluation）。** `idea_evaluation.md` v1（2026-10-13）写 method、主投 DIS Papers；`paper/outline.md` v4（2026-11-11）改为 existence proof。规范 log 无此决策；两份文件之间也没有 DEC 编号。
-
-课堂上拒绝 AI 建议的瞬间（例如参数、展板、论文结构）**没有** disposition 记录可指。
+课堂上拒绝 AI 建议的瞬间，除本聊天里对第 3 句主张的修改外，**没有**当场 disposition。
 
 ## Entries reconstructed later
 
-**None.** 没有补写、没有把旧聊天回填进 `_research_log/`。因此不存在 `reconstructed: true` 的条目。不是「补录得很干净」，是「根本没有补」。
+**全部现有 log 条目都是事后补的**（`reconstructed: true`，时间是 2026-11-24 +08:00）。证据：学生当晚口述的打印 / 布展 / 改系统；本聊天可见的交文件记录。不是从 8–10 月的聊天逐条恢复。其他聊天：**未补**。
 
 ## My judgment
 
-这份 log **不能**反映我如何工作、如何使用 AI：它是空的。
+这份 log **不能**代表整学期如何使用 AI。它只能证明：11 月 24 日补了三篇日记、一份决策，以及当天交作业的几次归档。
 
-教师能核实的：Git 时间戳、`process_journal` 三篇、阅读笔记、展签与打印照片、海棠 STL、论文大纲。这些证明做了什么、何时提交。
+教师能核实的：Git 时间戳、过程日记、阅读笔记、展签、打印照片、STL、初稿与终稿。
 
-教师**无法**从 log 核实的：哪一次我改了或拒绝了 AI 的句子、参数或结构；海棠实验室里逐日试错；线下打印与布展的当场决定；Cursor 聊天里的取舍。那些只存在于未导出的聊天和我的记忆里，本自评不把它们写成已经记过的 log。
+教师**无法**从 log 核实的：海棠实验室逐日试错；淘宝 / 珠海打印的机型与参数（日记里没有）；旧聊天里的取舍。那些仍未记录。
