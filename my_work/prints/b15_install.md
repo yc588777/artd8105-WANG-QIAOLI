@@ -11,7 +11,7 @@
 | 1 | A2 展板 | ISO A2 竖版 420 × 594 mm | 预览图 `haitang_a3_exhibition_board.jpg`（从 week11 300 dpi 板缩小；**现场印 A2**） |
 | 1 | 展签 | 中文 + 英文，见图 | `b15_wall_label.png`、`b15_wall_label.md` |
 | 4 | 系统导出的工艺图纸 | 四种语法各一张 | `craft_drawing_diamond.jpg`（旋转菱纹）· `craft_drawing_radial.jpg`（放射星纹）· `craft_drawing_ripple.jpg`（涟漪）· `craft_drawing_cellular.jpg`（细胞） |
-| 2 | 3D 打印扇 | 两把实体 | 照片目前只有一把：`haitang_print.jpg`。第二把在现场，仓库里还没有单独照片 |
+| 2 | 3D 打印扇 | 两把实体 | `haitang_print.jpg`（一把）；`haitang_print_2.jpg`（2026-11-24，两把同框） |
 
 ## 空间与电力 / Space and power
 
@@ -22,4 +22,4 @@
 
 ## 还缺的记录（文件，不是现场件数）
 
-第二把打印扇的照片尚未进仓库。布展后补拍正面即可。
+第二把扇的照片已进仓库：`haitang_print_2.jpg`（两把同框，2026-11-24）。

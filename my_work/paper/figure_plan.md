@@ -19,8 +19,8 @@ pairs_with: "outline.md"
 | 6 | 通俗拒绝与一键修正 | 无 | **needs capture**（F4） |
 | 7 | 工艺图纸样张 | `prints/craft_drawing_diamond.jpg` 等 | **available** |
 | 8 | 断头热点图对比 | `paper/eval/` 仅有 E1/E2 CSV，没有图 | **needs capture** |
-| 9 | 打印件 | `prints/haitang_print.jpg`；展览：`prints/exhibition_install_1.jpg`、`exhibition_install_2.jpg` | **available**（正面一张；侧光 / 交点 / 入框特写 **needs capture**） |
-| 10 | 四把扇的快照树与成品 | 无四把成品照片 | **not yet made**（E6） |
+| 9 | 打印件 | `prints/haitang_print.jpg`；两把同框：`prints/haitang_print_2.jpg`；展览：`prints/exhibition_install_1.jpg`、`exhibition_install_2.jpg` | **available**（两把正面；侧光 / 交点 / 入框特写 **needs capture**） |
+| 10 | 四把扇的快照树与成品 | 两把实体见 `haitang_print.jpg`、`haitang_print_2.jpg`；无四把成品照片 | **部分**（E6 四把仍缺） |
 
 展览板：`prints/haitang_a3_exhibition_board.jpg`（从 homework/week11 复制并缩小）。
 
