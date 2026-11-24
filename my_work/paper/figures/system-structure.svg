@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170mm" height="114mm" viewBox="0 0 1000 670"
+     font-family="Microsoft YaHei, Noto Sans SC, SimHei, sans-serif">
+  <rect width="1000" height="694" fill="#ffffff"/>
+
+  <text x="24" y="32" font-size="22" font-weight="700" fill="#1a1a1a">海棠经纬 · 系统结构</text>
+  <text x="976" y="30" font-size="13" fill="#3a3a3a" text-anchor="end">HAITANG WEAVE LAB</text>
+
+  <!-- 界面 -->
+  <text x="24" y="68" font-size="13" font-weight="700" fill="#1a1a1a">界面</text>
+  <text x="70" y="68" font-size="12.5" fill="#3a3a3a">设计者在同一页里改参数，并同时看到平面、挑压和三维</text>
+
+  <g font-size="13" fill="#1a1a1a">
+    <rect x="24" y="82" width="226" height="78" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.1"/>
+    <text x="38" y="106" font-size="14" font-weight="700">创作</text>
+    <text x="38" y="130" fill="#3a3a3a">四种图案</text>
+    <text x="38" y="148" fill="#3a3a3a">尺度、方向、弧度、框厚</text>
+
+    <rect x="262" y="82" width="226" height="78" fill="#ffffff" stroke="#c8c8c8"/>
+    <text x="276" y="106" font-size="14" font-weight="700">平面 / 挑压</text>
+    <text x="276" y="130" fill="#3a3a3a">平面看篾路</text>
+    <text x="276" y="148" fill="#3a3a3a">挑压看上下次序</text>
+
+    <rect x="500" y="82" width="226" height="78" fill="#ffffff" stroke="#c8c8c8"/>
+    <text x="514" y="106" font-size="14" font-weight="700">三维预览</text>
+    <text x="514" y="130" fill="#3a3a3a">扇面、灰边、扇柄</text>
+    <text x="514" y="148" fill="#3a3a3a">同一网格</text>
+
+    <rect x="738" y="82" width="238" height="78" fill="#ffffff" stroke="#c8c8c8"/>
+    <text x="752" y="106" font-size="14" font-weight="700">尺寸 · 导出 · 方案</text>
+    <text x="752" y="130" fill="#3a3a3a">整扇高度与热床</text>
+    <text x="752" y="148" fill="#3a3a3a">工艺图、模型、会话</text>
+  </g>
+
+  <text x="24" y="188" font-size="13" font-weight="700" fill="#1a1a1a">计算</text>
+  <text x="70" y="188" font-size="12.5" fill="#3a3a3a">默认锁定母版。图案只在框内生成，外轮廓不跟着改</text>
+
+  <rect x="24" y="200" width="952" height="36" fill="#1a1a1a"/>
+  <text x="38" y="223" font-size="13.5" fill="#ffffff">锁定母版　扇框、护片与扇柄来自同一轮廓，只做等比缩放。出版尺寸约 113.93 × 180 mm。</text>
+
+  <g fill="none" stroke="#1a1a1a" stroke-width="1.1">
+    <rect x="24" y="252" width="178" height="168"/>
+    <rect x="218" y="252" width="178" height="168"/>
+    <rect x="412" y="252" width="178" height="168"/>
+    <rect x="606" y="252" width="178" height="168"/>
+    <rect x="800" y="252" width="176" height="168"/>
+  </g>
+  <g fill="#1a1a1a">
+    <polygon points="204,332 216,336 204,340"/>
+    <polygon points="398,332 410,336 398,340"/>
+    <polygon points="592,332 604,336 592,340"/>
+    <polygon points="786,332 798,336 786,340"/>
+  </g>
+
+  <g font-size="13" fill="#1a1a1a">
+    <text x="38" y="276" font-size="14" font-weight="700">1　编织语法</text>
+    <text x="38" y="302" fill="#3a3a3a">旋转菱纹</text>
+    <text x="38" y="322" fill="#3a3a3a">放射星纹</text>
+    <text x="38" y="342" fill="#3a3a3a">涟漪流动</text>
+    <text x="38" y="362" fill="#3a3a3a">细胞生长</text>
+    <text x="38" y="390" fill="#3a3a3a">可加底编</text>
+
+    <text x="232" y="276" font-size="14" font-weight="700">2　边界锚定</text>
+    <text x="232" y="306" fill="#3a3a3a">每根篾条两端</text>
+    <text x="232" y="326" fill="#3a3a3a">埋入边框</text>
+    <text x="232" y="354" fill="#3a3a3a">不在边上裁断</text>
+
+    <text x="426" y="276" font-size="14" font-weight="700">3　挑压</text>
+    <text x="426" y="306" fill="#3a3a3a">交点交替上下</text>
+    <text x="426" y="334" fill="#3a3a3a">抬升不超过</text>
+    <text x="426" y="354" fill="#3a3a3a">扇框留下的余量</text>
+
+    <text x="620" y="276" font-size="14" font-weight="700">4　成体</text>
+    <text x="620" y="306" fill="#3a3a3a">扇框与篾带</text>
+    <text x="620" y="326" fill="#3a3a3a">并成一个网格</text>
+    <text x="620" y="354" fill="#3a3a3a">扇柄与扇面相连</text>
+
+    <text x="814" y="276" font-size="14" font-weight="700">5　闸门</text>
+    <text x="814" y="306" fill="#3a3a3a">路径连续</text>
+    <text x="814" y="326" fill="#3a3a3a">两端入框</text>
+    <text x="814" y="346" fill="#3a3a3a">单件且封闭</text>
+    <text x="814" y="374" fill="#3a3a3a">通过后才导出</text>
+  </g>
+
+  <text x="24" y="452" font-size="13" font-weight="700" fill="#1a1a1a">交付</text>
+  <text x="70" y="452" font-size="12.5" fill="#3a3a3a">五个出口读的是同一次计算结果</text>
+
+  <g font-size="13" fill="#1a1a1a">
+    <rect x="24" y="466" width="180" height="72" fill="#ffffff" stroke="#c8c8c8"/>
+    <text x="38" y="494" font-size="14" font-weight="700">平面</text>
+    <text x="38" y="518" fill="#3a3a3a">篾路 PNG</text>
+
+    <rect x="216" y="466" width="180" height="72" fill="#ffffff" stroke="#c8c8c8"/>
+    <text x="230" y="494" font-size="14" font-weight="700">挑压</text>
+    <text x="230" y="518" fill="#3a3a3a">每根篾的上下次序</text>
+
+    <rect x="408" y="466" width="180" height="72" fill="#ffffff" stroke="#c8c8c8"/>
+    <text x="422" y="494" font-size="14" font-weight="700">三维</text>
+    <text x="422" y="518" fill="#3a3a3a">预览网格</text>
+
+    <rect x="600" y="466" width="180" height="72" fill="#ffffff" stroke="#c8c8c8"/>
+    <text x="614" y="494" font-size="14" font-weight="700">工艺图纸</text>
+    <text x="614" y="518" fill="#3a3a3a">A2　150 dpi</text>
+
+    <rect x="792" y="466" width="184" height="72" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.1"/>
+    <text x="806" y="494" font-size="14" font-weight="700">打印模型</text>
+    <text x="806" y="518" fill="#3a3a3a">STL · 3MF</text>
+  </g>
+
+  <rect x="24" y="554" width="952" height="36" fill="#f4f4f4"/>
+  <text x="38" y="577" font-size="13" fill="#1a1a1a">会话存在本机。每次存下的方案保存同一组参数，并可回到当时的平面与工艺图。</text>
+
+  <text x="24" y="618" font-size="12.5" fill="#3a3a3a">服务在本机 127.0.0.1:8787。界面把参数交给这一服务；平面、挑压、三维、图纸和模型都从上述五步生成。</text>
+  <text x="24" y="642" font-size="12.5" fill="#3a3a3a">关闭母版锁定后，平面与网格改由光栅场生成，外轮廓仍取自母版缓存。</text>
+</svg>

@@ -12,7 +12,7 @@ pairs_with: "outline.md"
 | # | 大纲要它证明什么 | 现有文件 | 状态 |
 |---|---|---|---|
 | 1 | 裁剪断头 / 锚定入框 / 打印件与工艺图纸 | 打印件：`prints/haitang_print.jpg`；工艺图纸：`prints/craft_drawing_*.jpg`；断头对照图未见 | **部分**：打印与图纸有；布尔 vs 锚定并排 **needs capture** |
-| 2 | 系统流程图 | 无 | **not yet made** |
+| 2 | 系统流程图 | `paper/figures/website-flow.png`（及 svg/pdf） | **available**（磁盘上已有，2026-11-24 纳入 git） |
 | 3 | 锚定规则示意 | 无独立图 | **not yet made** |
 | 4 | 四种语法缩略图 | `prints/craft_drawing_diamond.jpg`、`radial.jpg`、`ripple.jpg`、`cellular.jpg` | **available**（图纸，不是四宫格成品图） |
 | 5 | 挑压视图与剖面 | 无 | **needs capture**（F6） |
@@ -23,6 +23,8 @@ pairs_with: "outline.md"
 | 10 | 四把扇的快照树与成品 | 两把实体见 `haitang_print.jpg`、`haitang_print_2.jpg`；无四把成品照片 | **部分**（E6 四把仍缺） |
 
 展览板：`prints/haitang_a3_exhibition_board.jpg`（从 homework/week11 复制并缩小）。
+
+系统结构图（未编入大纲 Figure 1–10 编号）：`paper/figures/system-structure.png`（及 svg/pdf）。
 
 评估数字：`paper/eval/e1_e2_summary.json`、`e1_e2_runs.csv`（海棠实验室 eval/v4 副本）。这是脚本输出，不是切片或用户实验。
 

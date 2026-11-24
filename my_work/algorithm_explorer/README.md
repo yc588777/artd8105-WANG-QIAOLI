@@ -1,6 +1,6 @@
 # Algorithm explorer
 
-Session 3 规定路径。可运行的应用在本仓库 `my_work/tools/hybrid/`，线上：
+Session 3 规定路径。本目录有 `index.html`（说明页）和 `context/` 五份 Gemini 文稿。可运行的应用在本仓库 `my_work/tools/hybrid/`（未复制第二份源码），线上：
 
 https://yc588777.github.io/artd8105-WANG-QIAOLI/explorer/
 

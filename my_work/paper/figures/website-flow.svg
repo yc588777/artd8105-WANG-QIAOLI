@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="700" viewBox="0 0 1240 700">
+  <style>
+    text { font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif; }
+  </style>
+  <rect width="1240" height="700" fill="#ffffff"/>
+
+  <!-- 創作 + 頂欄，沒有右上角標題 -->
+  <rect x="16" y="16" width="176" height="92" rx="4" fill="#f4f4f6" stroke="#d5d5da" stroke-width="1.5"/>
+  <text x="104" y="72" text-anchor="middle" font-size="36" font-weight="700">創作</text>
+
+  <rect x="204" y="16" width="1020" height="92" rx="4" fill="#f7f7f8" stroke="#d5d5da" stroke-width="1.5"/>
+  <line x1="408" y1="16" x2="408" y2="108" stroke="#e4e4e8"/>
+  <line x1="612" y1="16" x2="612" y2="108" stroke="#e4e4e8"/>
+  <line x1="816" y1="16" x2="816" y2="108" stroke="#e4e4e8"/>
+  <line x1="1020" y1="16" x2="1020" y2="108" stroke="#e4e4e8"/>
+  <text x="306" y="70" text-anchor="middle" font-size="30" font-weight="700">尺寸</text>
+  <text x="510" y="70" text-anchor="middle" font-size="30" font-weight="700">匯出</text>
+  <text x="714" y="70" text-anchor="middle" font-size="30" font-weight="700">方案</text>
+  <text x="918" y="70" text-anchor="middle" font-size="30" font-weight="700">說明</text>
+  <text x="1122" y="58" text-anchor="middle" font-size="30" font-weight="700">會話</text>
+  <text x="1122" y="90" text-anchor="middle" font-size="24" font-weight="700" fill="#e6007a">存為方案</text>
+
+  <text x="16" y="148" font-size="26" font-weight="700">預設打開創作頁：左欄紋樣，中欄平面，右欄三維。</text>
+
+  <!-- 連到四欄 -->
+  <line x1="104" y1="108" x2="104" y2="172" stroke="#bdbdc2" stroke-width="3"/>
+  <line x1="104" y1="172" x2="1078" y2="172" stroke="#bdbdc2" stroke-width="3"/>
+  <line x1="161" y1="172" x2="161" y2="188" stroke="#bdbdc2" stroke-width="3"/>
+  <line x1="467" y1="172" x2="467" y2="188" stroke="#bdbdc2" stroke-width="3"/>
+  <line x1="772" y1="172" x2="772" y2="188" stroke="#bdbdc2" stroke-width="3"/>
+  <line x1="1078" y1="172" x2="1078" y2="188" stroke="#bdbdc2" stroke-width="3"/>
+  <rect x="98" y="166" width="12" height="12" fill="#1a1a1a"/>
+  <rect x="155" y="166" width="12" height="12" fill="#1a1a1a"/>
+  <rect x="461" y="166" width="12" height="12" fill="#1a1a1a"/>
+  <rect x="766" y="166" width="12" height="12" fill="#1a1a1a"/>
+  <rect x="1072" y="166" width="12" height="12" fill="#1a1a1a"/>
+
+  <!-- 1 尺寸 -->
+  <g>
+    <rect x="16" y="188" width="291" height="268" rx="4" fill="#fbfbfb" stroke="#d5d5da" stroke-width="1.5"/>
+    <circle cx="48" cy="226" r="18" fill="#e6007a"/>
+    <text x="48" y="234" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">1</text>
+    <text x="76" y="236" font-size="32" font-weight="700">尺寸</text>
+    <rect x="32" y="252" width="259" height="44" fill="#f0f0f3"/>
+    <text x="161" y="282" text-anchor="middle" font-size="26" font-weight="700">高 180 mm</text>
+    <rect x="32" y="302" width="259" height="44" fill="#f0f0f3"/>
+    <text x="161" y="332" text-anchor="middle" font-size="26" font-weight="700">寬約 114 mm</text>
+    <rect x="32" y="352" width="259" height="44" fill="#f0f0f3"/>
+    <text x="161" y="382" text-anchor="middle" font-size="26" font-weight="700">外框 · 護片 · 扇柄</text>
+    <rect x="32" y="402" width="259" height="40" fill="#1a1a1a"/>
+    <text x="161" y="430" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">220 mm 熱床可平放</text>
+  </g>
+
+  <!-- 2 圖案 -->
+  <g>
+    <rect x="319" y="188" width="291" height="268" rx="4" fill="#fbfbfb" stroke="#d5d5da" stroke-width="1.5"/>
+    <circle cx="351" cy="226" r="18" fill="#e6007a"/>
+    <text x="351" y="234" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">2</text>
+    <text x="379" y="236" font-size="32" font-weight="700">圖案</text>
+    <rect x="335" y="252" width="259" height="44" fill="#f0f0f3"/>
+    <text x="464" y="282" text-anchor="middle" font-size="26" font-weight="700">旋轉菱紋</text>
+    <rect x="335" y="302" width="259" height="44" fill="#f0f0f3"/>
+    <text x="464" y="332" text-anchor="middle" font-size="26" font-weight="700">放射星紋</text>
+    <rect x="335" y="352" width="259" height="44" fill="#f0f0f3"/>
+    <text x="464" y="382" text-anchor="middle" font-size="26" font-weight="700">漣漪流動</text>
+    <rect x="335" y="402" width="259" height="40" fill="#1a1a1a"/>
+    <text x="464" y="430" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">細胞生長</text>
+  </g>
+
+  <!-- 平面 / 交點 / 三維 -->
+  <g>
+    <rect x="622" y="188" width="291" height="268" rx="4" fill="#fbfbfb" stroke="#d5d5da" stroke-width="1.5"/>
+    <circle cx="654" cy="226" r="18" fill="#e6007a"/>
+    <text x="654" y="234" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">3</text>
+    <text x="682" y="236" font-size="32" font-weight="700">交點</text>
+    <rect x="638" y="252" width="259" height="44" fill="#f0f0f3"/>
+    <text x="767" y="282" text-anchor="middle" font-size="26" font-weight="700">平面　/　挑壓</text>
+    <rect x="638" y="302" width="259" height="44" fill="#f0f0f3"/>
+    <text x="767" y="332" text-anchor="middle" font-size="26" font-weight="700">共用一張表</text>
+    <rect x="638" y="352" width="259" height="44" fill="#f0f0f3"/>
+    <text x="767" y="382" text-anchor="middle" font-size="26" font-weight="700">三維在右欄</text>
+    <rect x="638" y="402" width="259" height="40" fill="#1a1a1a"/>
+    <text x="767" y="430" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">中欄兩種看法</text>
+  </g>
+
+  <!-- 匯出 -->
+  <g>
+    <rect x="925" y="188" width="299" height="268" rx="4" fill="#fbfbfb" stroke="#d5d5da" stroke-width="1.5"/>
+    <text x="949" y="236" font-size="32" font-weight="700">匯出</text>
+    <rect x="941" y="252" width="267" height="44" fill="#f0f0f3"/>
+    <text x="1074" y="282" text-anchor="middle" font-size="24" font-weight="700">快速 · 推薦 · 高精度</text>
+    <rect x="941" y="302" width="267" height="44" fill="#f0f0f3"/>
+    <text x="1074" y="332" text-anchor="middle" font-size="26" font-weight="700">STL　·　3MF</text>
+    <rect x="941" y="352" width="267" height="44" fill="#f0f0f3"/>
+    <text x="1074" y="382" text-anchor="middle" font-size="26" font-weight="700">工藝圖 PNG</text>
+    <rect x="941" y="402" width="267" height="40" fill="#e6007a"/>
+    <text x="1074" y="430" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">三關通過才出檔</text>
+  </g>
+
+  <!-- 三條說明，各佔一整行 -->
+  <rect x="16" y="476" width="1208" height="64" fill="#f7f7f8"/>
+  <circle cx="48" cy="508" r="18" fill="#e6007a"/>
+  <text x="48" y="516" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">1</text>
+  <text x="78" y="518" font-size="26" font-weight="700">高 180 mm、寬約 114 mm。外框、護片、扇柄鎖定。紋樣不改輪廓。標出 220 mm 熱床。</text>
+
+  <rect x="16" y="548" width="1208" height="64" fill="#f7f7f8"/>
+  <circle cx="48" cy="580" r="18" fill="#e6007a"/>
+  <text x="48" y="588" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">2</text>
+  <text x="78" y="590" font-size="26" font-weight="700">菱紋甲向 18、乙向 −18。星紋從一個中心等角伸出，環等比變大。細胞為六邊格。</text>
+
+  <rect x="16" y="620" width="1208" height="64" fill="#f7f7f8"/>
+  <circle cx="48" cy="652" r="18" fill="#e6007a"/>
+  <text x="48" y="660" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">3</text>
+  <text x="78" y="662" font-size="26" font-weight="700">平面與挑壓共用交點表。連續路徑、框體錨固、單一連通體通過後，才出 STL、3MF、工藝圖。</text>
+</svg>
