@@ -15,6 +15,6 @@ kind: agent filing note — not student prose
 - 参考文献未在本次打开 DOI 复核。S14 文献审计仍待做。
 - 署名行写作「汪俏黎，Atticus Sims（通讯作者）」。这是课业稿，是否署指导教师姓名由学生与教师确认；此处未改。
 
-## S14 终稿（学生 2026-11-24 19:46 确认）
+## S14 终稿（学生 2026-11-25 00:35 替换）
 
-学生指定 `HaiTang_Weave_Lab_Revised_EN-v3.docx` / `final.md` 为提交终稿。不以另一份稿替换。`draft_v1.md` 只保留为初稿记录。
+学生用 E 盘同一文件名的新 Word（修改时间 2026-11-24 23:14）覆盖 `HaiTang_Weave_Lab_Revised_EN-v3.docx` 与 `final.md`。`draft_v1.md` 仍是初稿，未动。

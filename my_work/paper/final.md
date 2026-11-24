@@ -1,23 +1,23 @@
 ---
 student: "汪俏黎 / WANG QIALI"
-date: 2026-11-24
-source: "copied from E:/UM/UM-3/ATTICUS/结课论文/HaiTang_Weave_Lab_Revised_EN-v3.docx; prose not rewritten"
-version: final-v3-en
-status: "S14 final — student declared 2026-11-24"
-approx_words_excluding_references: 4264
+date: 2026-11-25
+source: "replaced from E:/UM/UM-3/ATTICUS/结课论文/HaiTang_Weave_Lab_Revised_EN-v3.docx; prose not rewritten"
+version: final-v3-en-replaced-2026-11-25
+status: "S14 final — student replaced 2026-11-25"
+approx_words_excluding_references: 4132
 canonical_docx: "HaiTang_Weave_Lab_Revised_EN-v3.docx"
 ---
 
 # HaiTang Weave Lab: A Manufacturability-Constrained Parametric System for Dual-Path Fabrication and Photorealistic Preview of Bamboo-Woven Fans
 
-Qiaoli Wang (WANGQIAOLI)1, Atticus Sims1,*
+Qiaoli Wang 1, Atticus Sims1,*
 
 1 Visual Communication Design, University of Macau, Macau, China
 * Corresponding Author: atticussims@um.edu.mo
 
 ## Abstract
 
-Traditional bamboo-woven handheld fans embody intricate over-under interlacing topologies that are difficult to customize, visually evaluate, and fabricate using general-purpose CAD software. Existing parametric tools impose steep learning curves and frequently decouple visual appearance from physical manufacturability, creating a persistent disconnect among 3D additive manufacturing, artisan-readable craft documentation, and realistic aesthetic evaluation. To address these challenges, we present HaiTang Weave Lab, a web-based, manufacturability-constrained parametric bamboo-weaving system designed for dual-path fabrication and photorealistic preview of begonia-shaped (HaiTang) handheld fans. Built on a decoupled FastAPI–WebGL architecture with asynchronous mesh-computation threads and session version management, the system synchronizes parameter sliders—including dual-family independent Split Arcs curvature control—with a 2D over-under topology view and an interactive 3D viewport in real time. At the geometric kernel level, a Master-Frame Locking module fixes the macro-envelope (180.0 × 113.9 mm) and restricts four parametric weaving grammars (Rotating Diamond, Radial Star, Ripple, and Kagome Net) within the inner aperture (104.8 × 95.4 mm), while enforcing a minimum bending radius constraint (R_min >= 15.0 mm) to prevent physical bamboo fracture. A planar topology solver maximizes over-under alternation and eliminates long floats (>= 3 consecutive same-side crossings) via bipartite coloring and a local crossing-flip heuristic for odd cycles. Combined with 3D ribbon sweeping (t = 1.20 mm, h = 1.80 mm), mandatory frame embedding (d_embed >= 1.8 mm), manifold repair, and solid Boolean union, the unified parametric kernel compiles three synchronized outputs in one click: (1) a watertight, support-free STL mesh for 3D printing; (2) a standardized nine-module vector craft production drawing; and (3) a photorealistic bamboo-weave preview image. Quantitative evaluation across all four grammars confirms 0 long floats, 97.5%–100.0% alternation rates, zero non-manifold edges, and interactive web-side responsiveness, providing an executable technical foundation for future designer–artisan collaboration, rapid prototyping, and intangible cultural heritage education.
+Traditional bamboo-woven handheld fans embody intricate over-under interlacing topologies that are difficult to customize, visually evaluate, and fabricate using general-purpose CAD software. Existing parametric tools impose steep learning curves and frequently decouple visual appearance from physical manufacturability, creating a persistent disconnect among 3D additive manufacturing, artisan-readable craft documentation, and realistic aesthetic evaluation. To address these challenges, we present HaiTang Weave Lab, a web-based, manufacturability-constrained parametric bamboo-weaving system designed for dual-path fabrication and photorealistic preview of begonia-shaped (HaiTang) handheld fans. Built on a decoupled FastAPI–WebGL architecture with asynchronous mesh-computation threads and session version management, the system synchronizes parameter sliders—including dual-family independent Split Arcs curvature control—with a 2D over-under topology view and an interactive 3D viewport in real time. At the geometric kernel level, a Master-Frame Locking module fixes the macro-envelope (180.0 × 113.9 mm) and restricts four parametric weaving grammars (Rotating Diamond, Radial Star, Ripple, and Kagome Net) within the inner aperture (104.8 × 95.4 mm), while enforcing a minimum bending radius constraint (R_min ≧ 15.0 mm) to prevent physical bamboo fracture. A planar topology solver maximizes over-under alternation and eliminates long floats (≧ 3 consecutive same-side crossings) via bipartite coloring and a local crossing-flip heuristic for odd cycles. Combined with 3D ribbon sweeping (t = 1.20 mm, h = 1.80 mm), mandatory frame embedding (d_embed ≧ 1.8 mm), manifold repair, and solid Boolean union, the unified parametric kernel compiles three synchronized outputs in one click: (1) a watertight, support-free STL mesh for 3D printing; (2) a standardized nine-module vector craft production drawing; and (3) a photorealistic bamboo-weave preview image. Quantitative evaluation across all four grammars confirms 0 long floats, 97.5%–100.0% alternation rates, zero non-manifold edges, and interactive web-side responsiveness, providing an executable technical foundation for future designer–artisan collaboration, rapid prototyping, and intangible cultural heritage education.
 
 **Keywords:** Parametric Design; Computational Weaving; Digital Fabrication; Manufacturability Constraints; Automated Craft Drawings; Photorealistic Simulation; Bamboo Weaving.
 
@@ -35,9 +35,9 @@ Traditional bamboo weaving is a hallmark of East Asian intangible cultural herit
 
 To bridge these gaps, we present HaiTang Weave Lab, a browser-based, manufacturability-constrained parametric system that unifies dual-path fabrication (watertight 3D printing STL + standardized craft production drawings) and photorealistic preview within a single computational kernel. Our primary contributions are fourfold:
 
-• Master-Frame Locking and Multi-Grammar Formulation: We decouple macro-envelope stability (180.0 × 113.9 mm) from micro-pattern freedom within a locked aperture (104.8 × 95.4 mm), mathematically formalizing four distinct weaving grammars—including dual-family independent Split Arcs curvature control—coupled with an analytical minimum bending radius check (R_min >= 15.0 mm).
+• Master-Frame Locking and Multi-Grammar Formulation: We decouple macro-envelope stability (180.0 × 113.9 mm) from micro-pattern freedom within a locked aperture (104.8 × 95.4 mm), mathematically formalizing four distinct weaving grammars—including dual-family independent Split Arcs curvature control—coupled with an analytical minimum bending radius check (R_min ≧ 15.0 mm).
 
-• Manufacturability-Constrained Topology Solver and Watertight Solidification: We formulate a planar crossing solver combining bipartite 2-coloring and a local crossing-flip heuristic for triaxial odd cycles to guarantee 0 long floats and 97.5%–100.0% alternation, integrated with cosine-interpolated 3D ribbon sweeping (t = 1.20 mm, h = 1.80 mm), >= 1.8 mm frame embedding, manifold repair, and solid Boolean union.
+• Manufacturability-Constrained Topology Solver and Watertight Solidification: We formulate a planar crossing solver combining bipartite 2-coloring and a local crossing-flip heuristic for triaxial odd cycles to guarantee 0 long floats and 97.5%–100.0% alternation, integrated with cosine-interpolated 3D ribbon sweeping (t = 1.20 mm, h = 1.80 mm), ≧ 1.8 mm frame embedding, manifold repair, and solid Boolean union.
 
 • Automated Nine-Module Craft Drawing Compiler: We develop a deterministic vector compiler that translates the parametric kernel directly into a standardized nine-module production drawing containing 1:1 front views, 5:1 cross-sections, 3:1 frame-embedding allowances (4.0 mm per end), 2:1 crossing-index maps, bills of materials, and strip-by-strip over-under schedules.
 
@@ -51,7 +51,7 @@ Computational approaches to weaving have bridged traditional fiber crafts and al
 
 ### 2.2 Manufacturability Constraints in Additive Manufacturing of Woven Structures
 
-Translating interwoven curve networks into physically robust 3D-printed artifacts requires rigorous geometric and additive-manufacturing (AM) constraints [6, 18]. Attene et al. [5] surveyed polygon mesh repairing techniques essential for eliminating non-manifold edges, self-intersections, and degenerate faces prior to slicing, while Zhou et al. [19] established exact mesh arrangements for robust solid Boolean operations. In craft-oriented digital fabrication, Gupta and Shende [20] explored 'from-flat-to-form' hybrid bamboo-PLA meshes, highlighting that boundary anchoring and rim closure are decisive for structural integrity. Similarly, Liu et al. [4] (ClayScape) demonstrated that embedding structural feasibility constraints—such as overhang limits and wall thickness—directly into the design interface prevents print collapse. Building on these insights and interactive CAD design-space exploration principles [21], HaiTang Weave Lab hard-codes strip thickness (t = 1.20 mm), crossing lift (h = 1.80 mm), mandatory frame embedding (d_embed >= 1.8 mm), and automated manifold repair into its backend solidification pipeline, ensuring support-free FDM printability without manual mesh fixing.
+Translating interwoven curve networks into physically robust 3D-printed artifacts requires rigorous geometric and additive-manufacturing (AM) constraints [6, 18]. Attene et al. [5] surveyed polygon mesh repairing techniques essential for eliminating non-manifold edges, self-intersections, and degenerate faces prior to slicing, while Zhou et al. [19] established exact mesh arrangements for robust solid Boolean operations. In craft-oriented digital fabrication, Gupta and Shende [20] explored 'from-flat-to-form' hybrid bamboo-PLA meshes, highlighting that boundary anchoring and rim closure are decisive for structural integrity. Similarly, Liu et al. [4] (ClayScape) demonstrated that embedding structural feasibility constraints—such as overhang limits and wall thickness—directly into the design interface prevents print collapse. Building on these insights and interactive CAD design-space exploration principles [21], HaiTang Weave Lab hard-codes strip thickness (t = 1.20 mm), crossing lift (h = 1.80 mm), mandatory frame embedding (d_embed ≧ 1.8 mm), and automated manifold repair into its backend solidification pipeline, ensuring support-free FDM printability without manual mesh fixing.
 
 ### 2.3 Automated Craft Documentation, Photorealistic Preview, and Boundary Objects
 
@@ -63,7 +63,7 @@ HaiTang Weave Lab adopts a decoupled client–server architecture optimized for 
 
 ![figure: image1.png](figures/final/image1.png)
 
-Fig. 1. Web-based interactive interface of HaiTang Weave Lab, showing the bilingual top bar, four weaving grammar selectors, dual-family Split Arcs sliders, synchronized 2D over-under / 3D WebGL viewports, and one-click export controls.
+Fig. 1. Web-based interactive interface of HaiTang Weave Lab
 
 ### 3.2 Master-Frame Locking and Baseline Manufacturability Constraints
 
@@ -80,8 +80,8 @@ Table 1. Baseline geometric dimensions and manufacturability constraints locked 
 | Strip Geometry | Standard Strip Thickness | t (3D Sweep Engine) | 1.20 mm | Balances FDM minimum printable wall thickness and bamboo feel |
 | Strip Geometry | Crossing Lift Height | h (3D Sweep Engine) | 1.80 mm | Controls total over-under relief height; prevents self-intersection |
 | Strip Geometry | Strip Width Range | w (Layer Engine) | 1.3–2.9 mm | Dynamically grouped by hierarchy (e.g., 1.8×0.9, 2.6×1.2 mm) |
-| Physical & Craft | Min. Bending Radius | R_min (Curvature Check) | >= 15.0 mm | Prevents natural bamboo sliver fracture during high-curvature bending |
-| Boundary & Cut | Min. Frame Embedding | d_embed (Boolean Pipe) | >= 1.8 mm | Guarantees robust STL Boolean union and prevents manual pull-out |
+| Physical & Craft | Min. Bending Radius | R_min (Curvature Check) | ≧ 15.0 mm | Prevents natural bamboo sliver fracture during high-curvature bending |
+| Boundary & Cut | Min. Frame Embedding | d_embed (Boolean Pipe) | ≧ 1.8 mm | Guarantees robust STL Boolean union and prevents manual pull-out |
 | Boundary & Cut | Craft Cutting Allowance | Δ_allow (Drawing Comp.) | 4.0 mm / end | Provides manual trimming margin automatically added to cut length |
 
 ### 3.3 Mathematical Formulation of Four Weaving Grammars and Bending-Radius Verification
@@ -90,9 +90,11 @@ Within the locked aperture Ω_open, the system implements four parametric weavin
 
 C(u) = (1 - u)^2 P_0 + 2(1 - u)u [ (P_0 + P_1)/2 + 2δ n ] + u^2 P_1,    u ∈ [0, 1]    (1)
 
-Setting opposite bow offsets for the two families (e.g., Arc A = +18 mm, Arc B = −18 mm) smoothly transforms an orthogonal/diagonal straight-strip lattice into a hyperbolic-paraboloid-like curved weave while strictly preserving frame-to-frame continuity. To ensure physical craftability with natural bamboo slivers, the kernel evaluates the analytical curvature κ(u) along every generated curve C(u) and enforces a minimum bending radius constraint R_min >= 15.0 mm:
 
-κ(u) = ||C'(u) × C''(u)|| / ||C'(u)||^3,    R_min = 1 / max_{u ∈ [0,1]} κ(u) >= 15.0 mm    (2)
+Setting opposite bow offsets for the two families (e.g., Arc A = +18 mm, Arc B = −18 mm) smoothly transforms an orthogonal/diagonal straight-strip lattice into a hyperbolic-paraboloid-like curved weave while strictly preserving frame-to-frame continuity. To ensure physical craftability with natural bamboo slivers, the kernel evaluates the analytical curvature κ(u) along every generated curve C(u) and enforces a minimum bending radius constraint R_min ≧ 15.0 mm:
+
+| κ(u) = \|\|C'(u) × C''(u)\|\| / \|\|C'(u)\|\|^3,    R_min = 1 / max_{u ∈ [0,1]} κ(u) ≧ 15.0 mm | (2) |
+| --- | --- |
 
 Whenever extreme slider values violate R_min < 15.0 mm, the backend flags a manufacturability warning in the UI and annotates the corresponding strip in the compiled production drawing, prompting artisans to pre-soak and test-bend the sliver before assembly. Table 2 summarizes the mathematical generation rules and control parameters for all four weaving grammars.
 
@@ -107,17 +109,18 @@ Table 2. Mathematical generation rules and parametric controls across the four w
 
 ![figure: image2.png](figures/final/image2.png)
 
-Fig. 2. Photorealistic bamboo-weave preview images synthesized by the system for all four grammars: (a) Split-Arc Diamond, (b) Radial Star, (c) Ripple, and (d) Kagome Net.
+Fig. 2. Photorealistic bamboo-weave preview images synthesized by the system for all four grammars
 
 ## 4. Weaving Topology, Manufacturability, and Unified Compilation
 
 ### 4.1 Planar Crossing Solver and Odd-Cycle Conflict Resolution
 
-The planar topology solver converts the clipped 2D centerline families into a planar intersection graph G = (V, E), assigning each strip i a sequential index and directional markers (filled circle = start, hollow circle = end). Let strip i traverse n_i crossings with binary over-under states s_{i,k} ∈ {+1, −1} (+1 = over, −1 = under). The global alternation rate R_alt and zero-long-float constraint (prohibiting >= 3 consecutive same-side crossings) are defined as:
+The planar topology solver converts the clipped 2D centerline families into a planar intersection graph G = (V, E), assigning each strip i a sequential index and directional markers (filled circle = start, hollow circle = end). Let strip i traverse n_i crossings with binary over-under states s_{i,k} ∈ {+1, −1} (+1 = over, −1 = under). The global alternation rate R_alt and zero-long-float constraint (prohibiting ≧ 3 consecutive same-side crossings) are defined as:
 
-R_alt = [ Σ_i Σ_k I(s_{i,k} · s_{i,k+1} = -1) / Σ_i (n_i - 1) ] × 100%,    max_{i,k} | Σ_{j=0}^{2} s_{i,k+j} | < 3    (3)
+| R_alt = [ Σ_i Σ_k I(s_{i,k} · s_{i,k+1} = -1) / Σ_i (n_i - 1) ] × 100%,    max_{i,k} \| Σ_{j=0}^{2} s_{i,k+j} \< 3    (3)
 
-where I(·) is the indicator function equal to 1 when consecutive crossings strictly alternate. For biaxial grammars (Rotating Diamond, Radial Star, and Ripple), the dual intersection graph is bipartite, enabling deterministic 2-coloring that guarantees R_alt = 100.0% and 0 long floats. For the triaxial Kagome Net, three-way intersections introduce topological odd cycles where strict 100% alternation is mathematically unattainable. To resolve odd-cycle conflicts without creating structural long floats, our solver executes a two-stage heuristic: (1) greedy parity propagation along each strip family initialized from the central hexagonal core; followed by (2) a local 1-opt crossing-flip refinement that iteratively flips crossing states s_{i,k} at any detected float run of length >= 3 while minimizing the total parity-violation penalty. Across 535 crossings in the Kagome Net benchmark, this solver converges in milliseconds to R_alt = 97.5% with strictly 0 long floats.
+
+where I(·) is the indicator function equal to 1 when consecutive crossings strictly alternate. For biaxial grammars (Rotating Diamond, Radial Star, and Ripple), the dual intersection graph is bipartite, enabling deterministic 2-coloring that guarantees R_alt = 100.0% and 0 long floats. For the triaxial Kagome Net, three-way intersections introduce topological odd cycles where strict 100% alternation is mathematically unattainable. To resolve odd-cycle conflicts without creating structural long floats, our solver executes a two-stage heuristic: (1) greedy parity propagation along each strip family initialized from the central hexagonal core; followed by (2) a local 1-opt crossing-flip refinement that iteratively flips crossing states s_{i,k} at any detected float run of length ≧ 3 while minimizing the total parity-violation penalty. Across 535 crossings in the Kagome Net benchmark, this solver converges in milliseconds to R_alt = 97.5% with strictly 0 long floats.
 
 ### 4.2 Fabrication Path 1: Watertight Solidification for Support-Free 3D Printing
 
@@ -125,7 +128,8 @@ To eliminate interpenetration at crossings and produce crisp tactile relief, the
 
 z_i(l) = [(h - t) / 2] · interp_cos(s_{i,k}, s_{i,k+1}; l),    s.t.  h > t    (4)
 
-At the aperture boundary ∂Ω_open, every strip centerline is extended outward into the solid fan frame by d_embed >= 1.8 mm to prevent detachment. Each swept rectangular-profile ribbon is then passed through an automated manifold-repair stage (eliminating degenerate triangles and unifying outward normals [5]) followed by exact solid Boolean union [19] with the locked begonia frame and handle. Because the bottom face of the frame and the underside of the lower-crossing ribbons sit coplanar on the build plate (with maximum unsupported bridge span <= 4.5 mm), the exported STL is guaranteed watertight and directly printable without support structures.
+
+At the aperture boundary ∂Ω_open, every strip centerline is extended outward into the solid fan frame by d_embed ≧ 1.8 mm to prevent detachment. Each swept rectangular-profile ribbon is then passed through an automated manifold-repair stage (eliminating degenerate triangles and unifying outward normals [5]) followed by exact solid Boolean union [19] with the locked begonia frame and handle. Because the bottom face of the frame and the underside of the lower-crossing ribbons sit coplanar on the build plate (with maximum unsupported bridge span ≦ 4.5 mm), the exported STL is guaranteed watertight and directly printable without support structures.
 
 ### 4.3 Fabrication Path 2: Automated Nine-Module Craft Production Drawing
 
@@ -133,9 +137,10 @@ Adhering to the principle of 'one fan, one sequence, one schedule', the vector d
 
 L_{3D,i} = L_{open,i} + 2 d_embed,      L_{cut,i} = L_{open,i} + 2 Δ_allow    (5)
 
+
 ![figure: image3.png](figures/final/image3.png)
 
-Fig. 3. Automated nine-module craft production drawing compiled for the Split-Arc Diamond scheme (36 strips, 233 crossings, 100.0% alternation, 0 long floats, 3.29 m total cut length). English Module Index: ① 1:1 Front View; ② 5:1 Section (Detail A); ③ 3:1 Frame Embedding & Allowance (Detail B); ④ 2:1 Crossing-Index Map; ⑤ Weaving Statistics; ⑥ Craft Notes; ⑦ Overall Dimensions; ⑧ Bill of Materials; ⑨ Strip-by-Strip Over-Under Schedule.
+Fig. 3. Automated nine-module craft production drawing compiled for the Split-Arc Diamond scheme
 
 ### 4.4 Preview Path: Photorealistic Bamboo-Weave Synthesis
 
@@ -149,14 +154,14 @@ Table 3 presents the quantitative topological metrics and exported STL mesh qual
 
 Table 3. Quantitative comparison of topological performance and watertight STL mesh quality across the four weaving grammars.
 
-| Metric | Scheme 1: Split-Arc Diamond | Scheme 2: Radial Star | Scheme 3: Ripple | Scheme 4: Kagome Net |
+| Metric | Split-Arc Diamond | Radial Star | Ripple | Kagome Net |
 | --- | --- | --- | --- | --- |
 | Total Strips | 36 | 44 | 34 | 50 |
 | Strip Spec Tiers | 2 (A–B) | 6 (A–F) | 3 (A–C) | 3 (A–C) |
 | Typical Width w / Pitch | 2.6 mm / 4.5 mm | 1.4 mm / 4.5 mm | 2.0 mm / 6.5 mm | 2.2 mm / 3.9 mm |
 | Total Crossings | 233 | 261 | 210 | 535 |
 | Alternation Rate (R_alt) | 100.0% | 100.0% | 100.0% | 97.5% |
-| Long Floats (>= 3) | 0 | 0 | 0 | 0 |
+| Long Floats (≧ 3) | 0 | 0 | 0 | 0 |
 | Total Cut Length | 3.29 m | 3.67 m | 3.43 m | 4.31 m |
 | STL Triangle Count* | ~68,400 | ~82,100 | ~64,800 | ~118,500 |
 | Non-Manifold / Naked Edges | 0 / 0 (Watertight) | 0 / 0 (Watertight) | 0 / 0 (Watertight) | 0 / 0 (Watertight) |
@@ -182,21 +187,21 @@ All four exported STL models were imported directly into Bambu Studio without th
 
 ![figure: image4.png](figures/final/image4.png)
 
-Fig. 4. Direct slicing verification of all four exported watertight STL models in Bambu Studio on a textured PEI plate (support-free, 0.4 mm nozzle, 0.20 mm layer height): (a) Split-Arc Diamond, (b) Radial Star, (c) Ripple, and (d) Kagome Net.
+Fig. 4. Direct slicing verification of all four exported watertight STL models in Bambu Studio on a textured PEI plate
 
-![figure: image6.png](figures/final/image6.png)
+![figure: image5.png](figures/final/image5.png)
 
-Fig. 5. Physical 3D-printed handheld fan prototypes fabricated via the HaiTang Weave Lab solidification pipeline across all four grammars: (a) Split-Arc Diamond, (b) Radial Star, (c) Ripple, and (d) Kagome Net.
+Fig. 5. Physical 3D-printed handheld fan prototypes fabricated via the HaiTang Weave Lab solidification pipeline across all four grammars
 
 ## 6. Discussion, Limitations, and Future Work
 
 By compiling watertight STL meshes, nine-module craft production drawings, and photorealistic previews from a single FastAPI–WebGL parametric kernel, HaiTang Weave Lab establishes an executable technical foundation for future designer–artisan collaboration, heritage education, and cultural valorization [7, 8, 29]. From a craft-research perspective [13, 27], the system deliberately avoids positioning digital fabrication as a replacement for manual bamboo weaving; rather, it acts as a digital mediator [3, 22] that translates computational curvature into explicit cutting lengths and over-under sequences while preserving the artisan's tactile judgment and agency [23, 28]. The photorealistic preview module further addresses the 'Experience Value' dimension highlighted in recent ICH digitization frameworks [28], allowing non-expert users to intuitively assess material warmth and visual rhythm before fabrication.
 
-Several limitations define our immediate roadmap for future work. First, while the minimum bending radius constraint (R_min >= 15.0 mm) guards against gross curvature failure, natural bamboo slivers exhibit anisotropic spring-back and moisture-dependent elasticity; we plan to collaborate with master bamboo weavers to execute hand-woven physical trials directly from our compiled drawings and calibrate empirical spring-back compensation models. Second, the present study focuses on system architecture, algorithmic rigor, and digital fabrication verification; formal user evaluations—employing SUS, UEQ-S, and NASA-TLX protocols [29, 31] with both artisans and general audiences—remain essential to empirically validate usability, cognitive load, and cultural legitimacy.
+Several limitations define our immediate roadmap for future work. First, while the minimum bending radius constraint (R_min ≧15.0 mm) guards against gross curvature failure, natural bamboo slivers exhibit anisotropic spring-back and moisture-dependent elasticity; we plan to collaborate with master bamboo weavers to execute hand-woven physical trials directly from our compiled drawings and calibrate empirical spring-back compensation models. Second, the present study focuses on system architecture, algorithmic rigor, and digital fabrication verification; formal user evaluations—employing SUS, UEQ-S, and NASA-TLX protocols [29, 31] with both artisans and general audiences—remain essential to empirically validate usability, cognitive load, and cultural legitimacy.
 
 ## 7. Conclusion
 
-We presented HaiTang Weave Lab, a web-based, manufacturability-constrained parametric system for dual-path fabrication and photorealistic preview of bamboo-woven handheld fans. Through Master-Frame Locking, four mathematically formalized weaving grammars with Split Arcs curvature control and R_min >= 15.0 mm verification, an odd-cycle-aware topology solver guaranteeing 0 long floats, support-free watertight STL solidification, automated nine-module craft drawing compilation, and photorealistic preview synthesis, the system delivers a rigorous, reproducible engineering framework that connects computational geometry, additive manufacturing, and intangible cultural heritage revitalization.
+We presented HaiTang Weave Lab, a web-based, manufacturability-constrained parametric system for dual-path fabrication and photorealistic preview of bamboo-woven handheld fans. Through Master-Frame Locking, four mathematically formalized weaving grammars with Split Arcs curvature control and R_min ≧ 15.0 mm verification, an odd-cycle-aware topology solver guaranteeing 0 long floats, support-free watertight STL solidification, automated nine-module craft drawing compilation, and photorealistic preview synthesis, the system delivers a rigorous, reproducible engineering framework that connects computational geometry, additive manufacturing, and intangible cultural heritage revitalization.
 
 ## References
 
